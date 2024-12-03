@@ -1,0 +1,56 @@
+//google font==========================================================================
+
+// @import url("link");
+
+//local font =================================================================
+
+@import "font/font";
+
+//ICON font ============================================================================
+
+@import "font/iconfont";
+
+// SETTINGS ====================================================================
+
+// font =================================================================================
+$fontFamily: "VK Sans Display", sans-serif;
+
+// colors ===================================================================
+$mainColor: #171719;
+$backgroundColor: #f2f4f7;
+$gray: #787b8b;
+
+// font settings ==============================================================
+$fontSize: 16px;
+$fontWeight: 400;
+
+// sizes ======================================================================
+$containerWidth: 1280px;
+
+// 0 - without paddings
+$containerPaddings: 15px;
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+._container {
+  max-width: $containerWidth;
+  padding: 0 $containerPaddings;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+// reset styles=============================================================
+@import "base/null";
+
+//blocks====================================================================
+@import "blocks/header-top";
