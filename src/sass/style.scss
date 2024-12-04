@@ -20,6 +20,7 @@ $mainColor: #171719;
 $backgroundColor: #f2f4f7;
 $gray: #787b8b;
 $yellow: #ffdd2d;
+$white: #f6f8fc;
 
 // font settings ==============================================================
 $fontSize: 16px;
@@ -56,3 +57,8 @@ $containerPaddings: 15px;
 //blocks====================================================================
 @import "blocks/header-top";
 @import "blocks/header-bottom";
+@import "blocks/footer-top";
+@import "blocks/footer-bottom";
+@import "blocks/promo";
+@import "blocks/catalog-cards";
+@import "blocks/answers";

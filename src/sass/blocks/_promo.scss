@@ -1,0 +1,40 @@
+.main {
+
+    &__promo {
+    }
+}
+.promo {
+    padding: 30px 15px 0 15px;
+    &__container {
+        background: url("../img/promo/promo_bg.png") center center / cover no-repeat;
+        min-height: 420px;
+        border-radius: 30px;
+        padding-top: 50px;
+        padding-left: 70px;
+        box-sizing:border-box;
+    }
+
+    &__title {
+        font-family: "MTS Wide", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #fff;
+        max-width: 408px;
+        line-height: 152%;
+        margin-bottom: 46px;
+    }
+
+    &__btn {
+        padding: 20px 40px;
+        font-weight: 500;
+        font-size: 18px;
+        background-color: $yellow;
+        border-radius: 10px
+    }
+}
+
+.btn {
+
+    &_ylw {
+    }
+}
