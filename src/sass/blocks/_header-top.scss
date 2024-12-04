@@ -12,10 +12,16 @@
 }
 .header-top {
     padding: 17px 0 13px 0;
+    position: relative;
     &__container {
         display: flex;
         align-items: center;
         column-gap: 10px;
+        position: relative;
+    }
+
+    &__logo {
+        display: none;
     }
 
     &__nav {
@@ -56,6 +62,8 @@
     }
 
     &__icon {
+        width: 28px;
+        height: 28px;
     }
 
     &__info {
@@ -63,6 +71,50 @@
 
     }
 }
+
+.hamburger {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    flex: 0 0 auto;
+    // position: relative;
+    width: 35px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $mainColor;
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+    }
+  
+    // &_active {
+    //   & span:nth-child(2) {
+    //     display: none;
+    //   }
+  
+    //   span {
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+  
+    //     &:nth-child(1) {
+    //       transform: rotate(45deg);
+    //     }
+  
+    //     &:nth-child(3) {
+    //       transform: rotate(-45deg);
+    //     }
+    //   }
+    // }
+  }
 
 @media (max-width: 1150px) {
     .header-top {
@@ -79,12 +131,83 @@
 
     .socials {
         flex-direction: column;
-        column-gap: 0;
         row-gap: 10px;
 
         &__item {
+            text-align: right;
         }
     }
 
  
+}
+
+@media (max-width: 992px) {
+    .header-top {
+        &__container {
+            justify-content: flex-start;
+            column-gap: 0;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__logo {
+            display: block;
+            margin-right: 35px;
+        }
+
+    }
+
+    .socials {
+        flex-direction: row;
+
+        &__item {
+            text-align: right;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .socials {
+        &__item {
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .socials {
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 20px;
+    
+        span {
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+        }
+      
+      }
+}
+
+@media (max-width: 380px) {
+    .header-top {
+        &__logo {
+            display: none;
+        }
+    }
 }
