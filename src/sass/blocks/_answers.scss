@@ -14,9 +14,6 @@
     }
 
     &__title {
-        font-family: "MTS Wide", sans-serif;;
-        font-weight: 700;
-        font-size: 36px;
     }
 
     &__wrapper {
@@ -46,6 +43,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
 
     &__body {
