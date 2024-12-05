@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./JS/index.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <header class="header">
         <div class="header__top header-top">
           <div class="header-top__container _container">
-            <a href="" class="logo header-top__logo">
+            <a href="index.html" class="logo header-top__logo">
               <img src="./icons/logo.svg" alt="MartiShop">
             </a>
 
@@ -51,7 +52,7 @@
 
         <div class="header__bottom header-bottom">
           <div class="header-bottom__container _container">
-            <a href="" class="header-bottom__logo logo">
+            <a href="index.html" class="header-bottom__logo logo">
               <img src="./icons/logo.svg" alt="MartiShop">
             </a>
   
@@ -100,19 +101,32 @@
 
                 <div class="good__photo-block">
                     <div class="good__product-slider product-slider">
-                        <img src="./img/productPage/good/slider_img.png" alt="Сальник (манжета армированная)" class="product-slider__img">
-                        <img src="./img/productPage/good/slider_img2.png" alt="Сальник (манжета армированная)" class="product-slider__img">
+                      <img src="./img/productPage/good/slider_img.png" alt="Сальник (манжета армированная)" class="product-slider__img">
+                      <img src="./img/productPage/good/slider_img0.jpg" alt="Сальник (манжета армированная)" class="product-slider__img">
+                      <img src="./img/productPage/good/slider_img2.png"alt="Сальник (манжета армированная)" class="product-slider__img">
 
-                        <div class="product-slider__arr prev">
-                            <img src="./icons/productPage/good/slider_left_arr.svg" alt="prev">
+                        <div>
+                            <img src="./icons/productPage/good/slider_left_arr.svg" alt="arrow" class="product-slider__arr prev">
                         </div>
-                        <div class="product-slider__arr next">
-                            <img src="./icons/productPage/good/slider_right_arr.svg" alt="next">
+                        <div>
+                            <img src="./icons/productPage/good/slider_right_arr.svg" alt="arrow" class="product-slider__arr next">
+                        </div>
+
+                        <div class="product-slider__mini-img-block">
+                             <div class="product-slider__mini-img">
+                                <img src="./img/productPage/good/slider_img3.png" alt="Сальник (манжета армированная)">
+                             </div>
+                             <div class="product-slider__mini-img">
+                                <img src="./img/productPage/good/slider_img2.png" alt="Сальник (манжета армированная)">
+                             </div>
+                             <div class="product-slider__mini-img">
+                                <img src="./img/productPage/good/slider_img3.png" alt="Сальник (манжета армированная)">
+                             </div>
                         </div>
                     </div>
 
                     <div class="good__buy-block buy-block">
-                        <div class="buy-block__article">Артикул: 236-1121066-A4</div>
+                        <div class="buy-block__article"><span>Артикул:</span> 236-1121066-A4</div>
 
                         <div class="buy-block__price">980 тг</div>
 
@@ -142,9 +156,68 @@
 
                         <div class="buy-block__actions">
                             <a href="" class="btn_ylw buy-block__buy-btn">Купить</a>
-                            <a href="" class="buy-block__add-btn">Добавить в корзину</a>
+                            <a href="" class="btn_ylw buy-block__add-btn">Добавить в корзину</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="good__product-descr product-descr">
+                  <div class="product-descr__header">
+                    <ul class="product-descr__menu">
+                      <li class="product-descr__name">Описание</li>
+                      <li class="product-descr__name">Характеристики</li>
+                    </ul>
+                  </div>
+
+                  <div class="product-descr__body">
+                    <div class="product-descr__text">
+                      <ul class="product-descr__list">
+                        <li class="product-descr__param">
+                          Диаметр вала (мм): 28</li>
+                        <li class="product-descr__param">
+                          Наружный диаметр (мм): 43</li>
+                        <li class="product-descr__param">
+                          Высота (мм): 5</li>
+                        <li class="product-descr__param">
+                          Высота с пыльником (мм): 9.2 2.2 
+                        </li>
+                        <li class="product-descr__param">
+                          - тип и исполнение манжеты, где: 2
+                        </li>
+                        <li class="product-descr__param">
+                          – тип манжеты (с пыльником, для предотвращения вытекания уплотняемой среды и защиты от проникновения пыли)  2
+                        </li>
+                        <li class="product-descr__param">
+                          – исполнение (с формованной рабочей кромкой) Группа резины по ГОСТ 8752-79: 1 или 3  Изготовитель: Россия Продукция не подлежит обязательной сертификации
+                        </li>
+                        <li class="product-descr__param">
+                          Вес 1 шт: 10.0 гр
+                        </li>
+                        <li class="product-descr__param">
+                          Минимальная партия: 1 шт
+                        </li>
+                        <li class="product-descr__param">
+                          Применение: Манжеты армированные с пружиной (сальники)
+                        </li>
+                        <li class="product-descr__param">
+                          ГОСТ 8752-79 для уплотнения валов, работают в минеральных маслах и воде при избыточном давлении до 0.05 МПа и скорости вращения до 20 мс Работоспособны при t° от -45°С до +100°С в зависимости от среды: 
+                        </li>
+                        <li class="product-descr__param">
+                          - моторные и трансмиссионные (кроме гипоидного) минеральные масла от -45°С до +100°С  - гипоидные минеральные масла от -45°С до +80°С - соляровые минеральные масла от -45°С до +90°С
+                        </li>
+                        <li class="product-descr__param">
+                          - смазки на основе минеральных масел от -45°С до +90°С
+                        </li>
+                        <li class="product-descr__param">
+                          Условная прочность (МПа): 9.8-10.8  Твердость по ШОР А: 65-85
+                        </li>
+                        <li class="product-descr__param">
+                          Шифр детали: 236-1121066-А4 (Сальник муфты опережения ТНВД ЯМЗ)
+                        </li>
+                        <li class="product-descr__param">Код продавца: 02d16519-0e1c-4bd8-8c9b-6030e22d7b83</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
