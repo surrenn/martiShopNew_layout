@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+    //PRODUCT-SLIDER
     const images = document.querySelectorAll('.product-slider__img');
     const arrows = document.querySelectorAll('.product-slider__arr');
     const miniImages = document.querySelectorAll('.product-slider__mini-img');
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     arrows.forEach((e) => {
         e.addEventListener('click', (ev) => {
-            console.log(ev.target);
+
             if (ev.target.classList.contains('prev')) {
                 let index = imageIndex - 1;
     
@@ -39,6 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", () => show(index));
     })
 
-show(imageIndex);
+    show(imageIndex);
+
+    //PRODUCT DESCR
+    const titles = document.querySelectorAll('.product-descr__name');
+    const texts = document.querySelectorAll('.product-descr__text');
+
+    let titleIndex = 0;
+
+    function showText (index) {
+        titles[titleIndex].classList.remove('product-descr__name_active');
+        texts[titleIndex].classList.remove('product-descr__text_active');
+
+        titles[index].classList.add('product-descr__name_active');
+        texts[index].classList.add('product-descr__text_active');
+
+        titleIndex = index;
+    }
+
+    titles.forEach((title, index) => {
+        title.addEventListener("click", () => showText(index));
+    });
+
+    showText(titleIndex);
+
 
 });
