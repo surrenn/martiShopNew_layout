@@ -112,4 +112,12 @@
             flex: 0 0 100%;
         }
     }
+
+    .catalog-item {
+        padding: 20px;
+
+        &__color {
+            top: 23px;
+        }
+    }
 }

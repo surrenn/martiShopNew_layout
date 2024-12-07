@@ -34,6 +34,7 @@
         display: none;
 
         span {
+            cursor: pointer;
             line-height: 130%;
             position: relative;
             
@@ -63,6 +64,7 @@
     }
 
     &__catalog-block {
+        margin-top: 10px;
     }
 }
 
@@ -113,6 +115,161 @@
         line-height: 130%;
     }
 }
+
+
+.catalog-table {
+
+    &__top {
+        border-radius: 8px;
+        background-color: #fff;
+        
+    }
+
+    &__titles {
+    }
+
+    &__titles-list {
+        padding: 20px 20px 15px 20px;
+        display: grid;
+        grid-template-columns: 209px repeat(10, 1fr);
+    }
+
+    &__titles-item {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 130%;
+        padding: 0 5px;
+    }
+
+    &__title-divider {
+        background: #d5ddec;
+        width: 100%;
+        height: 2px;
+    }
+
+    &__page {
+        padding: 0 20px 20px 20px;
+        display: grid;
+        grid-template-columns: 209px repeat(10, 1fr);
+    }
+
+    &__column {
+
+        &:last-child {
+
+            .catalog-table__item {
+                    padding: 12.25px 5px;
+            }
+        }
+    }
+
+
+    &__item {
+        padding: 20px 5px;
+        position: relative;
+        font-size: 15px;
+        line-height: 130%;
+
+        a {
+            font-size: 15px;
+            line-height: 130%;
+        }
+
+        &:not(:last-child) {
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background: #d5ddec;
+            }
+        }
+
+        &_red {
+            color: #ff4d47;
+        }
+    }
+
+    &__form {
+        display: flex;
+        column-gap: 5px;
+
+        input {
+            border: 1px solid #d5ddec;
+            border-radius: 5px;
+            padding: 8px 5px;
+            text-align: center;
+            width: 46px;
+            height: 35px;
+        }
+    }
+
+    &__btn {
+        border: 1px solid $yellow;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+        background: #fff8d5;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+    &__pagination {
+        margin-top: 30px;
+    }
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+        column-gap: 5px;
+    }
+
+    &__item {
+        cursor: pointer;
+        border-radius: 22px;
+        padding: 10px 18px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: #fff;
+        flex-grow: 1;
+
+
+        img {
+            width: 7px;
+            height: 10px;
+        }
+
+        &_active {
+            background-color: $yellow;
+        }
+    }
+
+    &__prev {
+    }
+
+    &__next {
+    }
+}
+
+
 
 @media (max-width: 1080px) {
     .catalog-form {
