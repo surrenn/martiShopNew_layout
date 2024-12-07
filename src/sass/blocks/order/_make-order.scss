@@ -187,26 +187,6 @@
 }
 
 
-.input-box {
-    width: 100%;
-    &__name {
-        font-size: 12px;
-        line-height: 150%;
-        color: $gray;
-    }
-
-    &__input {
-        width: 100%;
-        padding: 10px 15px;
-        background-color: $backgroundColor;
-        border-radius: 10px;
-        height: 40px;
-        margin-top: 8px;
-        color: $gray;
-    }
-}
-
-
 .total {
     border-radius: 16px 16px 0 0;
     min-height: 486px;

@@ -1,0 +1,51 @@
+.input-box {
+    width: 100%;
+    &__name {
+        font-size: 12px;
+        line-height: 150%;
+        color: $gray;
+    }
+
+    &__input, &__select {
+        width: 100%;
+        border-radius: 10px;
+        height: 40px;
+        color: $gray;
+    }
+
+    &__input {
+        padding: 10px 15px;
+        background-color: $backgroundColor;
+        margin-top: 8px;
+    }
+
+    &__select {
+        padding: 10px 12px;
+        background: $backgroundColor;
+        font-size: 15px;
+        line-height: 130%;
+        appearance: none;
+        
+ 
+
+        .selected {
+            display: none;
+        }
+    }
+
+    &__select-wrapper {
+        position: relative;
+        margin-top: 8px;
+    }
+
+    &__select-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 22px;
+        width: 10px;
+        height: 6px;
+        background-image: url("../icons/dropdown_arr.svg");
+    }
+}
