@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", () => show(index));
     })
 
-    show(imageIndex);
+    // show(imageIndex);
 
     //PRODUCT DESCR
     const titles = document.querySelectorAll('.product-descr__name');
@@ -62,7 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
         title.addEventListener("click", () => showText(index));
     });
 
-    showText(titleIndex);
+    // showText(titleIndex);
+
+    //CATALOG FILTER
+    const formBlock  = document.querySelector('.catalog__form-block');
+    const filterBtn = document.querySelector('.catalog__hide span');
+    const hideCaption = document.querySelector('.catalog__hide');
+    
+    filterBtn.addEventListener('click', () =>  {
+        formBlock.classList.toggle('catalog__form-block_active');
+        hideCaption.classList.toggle('catalog__hide_active');
+    })
 
 
 });

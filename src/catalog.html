@@ -97,51 +97,55 @@
                 <h2 class="title catalog__title">Сальники рулевых реек (3 323 шт.)</h2>
 
                 <div class="catalog__wrapper">
-                    <form action="" class="catalog__form catalog-form">
-                        <div class="catalog-form__dimensions">
-                            <div class="catalog-form__input-box input-box">
-                                <div class="input-box__name">Д вн.</div>
-                                <input class="input-box__input" type="number" placeholder="мм">
-                            </div>
+                    <div class="catalog__form-block">
+                      <form action="" class="catalog__form catalog-form">
+                          <div class="catalog-form__dimensions">
+                              <div class="catalog-form__input-box input-box">
+                                  <div class="input-box__name">Д вн.</div>
+                                  <input class="input-box__input" type="number" placeholder="мм">
+                              </div>
+  
+                              <div class="catalog-form__input-box input-box">
+                                  <div class="input-box__name">Д нар.</div>
+                                  <input class="input-box__input" type="number" placeholder="мм">
+                              </div>
+  
+                              <div class="catalog-form__input-box input-box">
+                                  <div class="input-box__name">Высота</div>
+                                  <input class="input-box__input" type="number" placeholder="мм">
+                              </div>
+                          </div>
+      
+                          <div class="catalog-form__type">
+                              <div class="catalog-form__input-box input-box">
+                                  <div class="input-box__name">Тип</div>
+                                  <div class="input-box__select-wrapper">
+                                      <select class="input-box__select" name="catalog-type" id="catalog-type">
+                                          <option selected class="selected">Выберите тип</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <div class="catalog-form__admission">
+                              <div class="catalog-form__input-box input-box">
+                                  <div class="input-box__name">Допуск</div>
+                                  <div class="input-box__select-wrapper">
+                                      <select class="input-box__select" name="admission" id="admission">
+                                          <option selected>0,3</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <div class="catalog-form__actions">
+                              <button type="submit" class="btn_ylw catalog-form__apply">Применить</button>
+                              <button class="catalog-form__reset">Сбросить</button>
+                          </div>
+                      </form>
 
-                            <div class="catalog-form__input-box input-box">
-                                <div class="input-box__name">Д нар.</div>
-                                <input class="input-box__input" type="number" placeholder="мм">
-                            </div>
-
-                            <div class="catalog-form__input-box input-box">
-                                <div class="input-box__name">Высота</div>
-                                <input class="input-box__input" type="number" placeholder="мм">
-                            </div>
-                        </div>
-    
-                        <div class="catalog-form__type">
-                            <div class="catalog-form__input-box input-box">
-                                <div class="input-box__name">Тип</div>
-                                <div class="input-box__select-wrapper">
-                                    <select class="input-box__select" name="catalog-type" id="catalog-type">
-                                        <option selected class="selected">Выберите тип</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="catalog-form__admission">
-                            <div class="catalog-form__input-box input-box">
-                                <div class="input-box__name">Допуск</div>
-                                <div class="input-box__select-wrapper">
-                                    <select class="input-box__select" name="admission" id="admission">
-                                        <option selected>0,3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="catalog-form__actions">
-                            <button type="submit" class="btn_ylw catalog-form__apply">Применить</button>
-                            <button class="catalog-form__reset">Сбросить</button>
-                        </div>
-                    </form>
+                      <div class="catalog__hide"><span>Скрыть фильтр</span></div>
+                    </div>
     
                     <div class="catalog__catalog-block"></div>
                 </div>
