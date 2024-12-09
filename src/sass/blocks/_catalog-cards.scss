@@ -103,11 +103,23 @@
 }
 }
 
+// @media (max-width: 768px) {
+        
+//     .catalog-cards {
+//         padding-top: 15px;
+//     }
+// }
 
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
     
     .catalog-cards {
-    
+        padding-top: 30px;
+
+        &__wrapper {
+            row-gap: 10px;
+        }
+
         &__column {
             flex: 0 0 100%;
         }
@@ -115,9 +127,19 @@
 
     .catalog-item {
         padding: 20px;
+        border-radius: 16px;
+        min-height: 247px;
+
+        &__title {
+            font-size: 17px;
+        }
 
         &__color {
             top: 23px;
+        }
+
+        &__menu {
+            margin-top: 20px;
         }
     }
 }

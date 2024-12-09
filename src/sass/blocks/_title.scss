@@ -4,3 +4,9 @@
     font-size: 36px;
     line-height: 138%;
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 22px;
+    }
+}

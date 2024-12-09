@@ -78,23 +78,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const catalogBtn = document.querySelector('.header-bottom__catalog');
     const catalogHeader = document.querySelector('.catalog-header');
     const mobileItems = document.querySelectorAll('.catalog-header__item');
-    const backBtn = document.querySelector('.catalog-header__back');
+    const mobileLists = document.querySelectorAll('.catalog-header__mob-wrapper');
+
 
     catalogBtn.addEventListener('click', () => {
         catalogBtn.classList.toggle("header-bottom__catalog_active");
         catalogHeader.classList.toggle("catalog-header_active");
+
+        mobileItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const mobItem = mobileLists[index - 1];
+                const backBtn = mobItem.querySelector('.catalog-header__back');
+
+                mobItem.classList.add('catalog-header__mob-wrapper_active');
+
+                backBtn.addEventListener('click', () => {
+                    mobItem.classList.remove('catalog-header__mob-wrapper_active');
+                });
+
+                const innerItems = mobItem.querySelectorAll('catalog-header__inner-item');
+                
+                innerItems.forEach(innerItem => {
+                    innerItem.addEventListener('click', () => {
+                        catalogBtn.classList.remove("header-bottom__catalog_active");
+                        catalogHeader.classList.remove("catalog-header_active");
+                    })
+                })
+
+            });
+        });
+
+        
     });
 
-    mobileItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const wrapper = item.querySelector('.catalog-header__wrapper');
-            wrapper.classList.add('catalog-header__wrapper_active');
+   
+    //ANSWERS
 
-            backBtn.addEventListener('click', () => {
-                wrapper.classList.remove('catalog-header__wrapper_active');
-            })
+    const questionHeads = document.querySelectorAll('.question__head');
+
+    questionHeads.forEach(head => {
+        head.addEventListener('click', () => {
+            head.parentElement.classList.toggle('question_active');
         });
-    })
-
+    });
 
 });
