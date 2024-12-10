@@ -1,6 +1,44 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    //HAMBURGER AND MOBILE MENU
+    const headerTop = document.querySelector('.header-top');
+    const mobileMenu = document.querySelector('.mob-menu');
+
+    function isMobileMenuActive (elem) {
+
+        if (elem.classList.contains('hamburger_active')) {
+            document.querySelector('body').style.overflow = 'hidden';
+        } else {
+            document.querySelector('body').style.overflow = 'scroll';
+        }
+    }
+
+    headerTop.addEventListener('click', (e) => {
+        const elem = e.target.parentElement;
+
+        if (elem.classList.contains('hamburger')) {
+            elem.classList.toggle('hamburger_active');
+            mobileMenu.classList.toggle('mob-menu_active');
+
+            isMobileMenuActive(elem);
+
+            mobileMenu.querySelectorAll('.mob-list__item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    elem.classList.remove('hamburger_active');
+                    mobileMenu.classList.remove('mob-menu_active');
+
+                    isMobileMenuActive(elem);
+                });
+            });
+        };
+
+    });
+
+
     //PRODUCT-SLIDER
     const images = document.querySelectorAll('.product-slider__img');
     const arrows = document.querySelectorAll('.product-slider__arr');

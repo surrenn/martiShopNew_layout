@@ -1,5 +1,6 @@
 .header {
     background-color: #fff;
+
     &__top {
     }
 
@@ -10,9 +11,12 @@
     }
    
 }
+
 .header-top {
     padding: 17px 0 13px 0;
     position: relative;
+    min-height: 55px;
+
     &__container {
         display: flex;
         align-items: center;
@@ -95,26 +99,64 @@
       transition: all 0.3s ease 0s;
     }
   
-    // &_active {
-    //   & span:nth-child(2) {
-    //     display: none;
-    //   }
+    &_active {
+      & span:nth-child(2) {
+        display: none;
+      }
   
-    //   span {
-    //     position: absolute;
-    //     top: 50%;
-    //     transform: translateY(-50%);
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
   
-    //     &:nth-child(1) {
-    //       transform: rotate(45deg);
-    //     }
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
   
-    //     &:nth-child(3) {
-    //       transform: rotate(-45deg);
-    //     }
-    //   }
-    // }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
+
+.mob-menu {
+    overflow: scroll;
+    padding: 20px 40px 90px 40px;
+    position: absolute;
+    top: 101%;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: #fff;
+    transition: all 0.5s ease 0s;
+  
+    &__nav {
+    }
+  
+    &__mob-list {
+    }
+  
+    &_active {
+      left: 0;
+    }
+}
+
+.mob-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      padding: 20px 0;
+
+      a {
+        font-size: 20px;
+        line-height: 130%;
+      }
+    }
+}
 
 @media (max-width: 1150px) {
     .header-top {
@@ -183,12 +225,30 @@
 
     .hamburger {
         width: 20px;
-        height: 20px;
+        height: 18px;
     
         span {
-          width: 4px;
-          height: 4px;
-          border-radius: 100%;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+        }
+
+        &_active {
+            span {
+                
+            &:nth-child(1) {
+                width: 100%;
+                border-radius: 2px;
+                height: 2px;
+            }
+    
+            &:nth-child(3) {
+                width: 100%;
+                border-radius: 2px;
+                height: 2px;     
+            }
+
+            }
         }
       
       }
