@@ -21,9 +21,21 @@
     &__logo {
         margin-right: 272px;
         flex-shrink: 0;
+        position: relative;
+
         img {
             width: 210px;
             height: 39px;
+        }
+
+        .mobile-ring {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 169px;
+            height: 155px;
         }
     }
 
@@ -63,16 +75,29 @@
     flex-direction: column;
     row-gap: 20px;
     flex: 0 0 150px;
+
     &__item {
     }
 
-    &__linK {
+    &__link {
         line-height: 130%;
         color: $white;
     }
 }
+
 .footer-contacts {
     flex-shrink: 0;
+
+    &__top {
+    }
+
+    &__bottom {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
     &__phone {
         font-weight: 500;
         font-size: 22px;
@@ -81,7 +106,7 @@
     }
 
     &__whatsapp {
-        margin-top: 10px;
+        // margin-top: 10px;
         display: flex;
         column-gap: 10px;
         align-items: center;
@@ -96,7 +121,6 @@
     }
 
     &__email {
-        margin-top: 10px;
         line-height: 130%;
         color: $white;
     }
@@ -120,7 +144,155 @@
         }
 
         &__img {
+            padding-right: 15px;
+            text-align: right;
+            // display: none;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        
+        &__container {
+            row-gap: 0;
+            // align-items: center;
+        }
+
+        &__logo {
+            width: 218px;
+            align-self: center;
+
+            .mobile-ring {
+                display: block;
+            }
+        }
+
+        &__nav {
+            margin: 50px auto 0 auto;
+            margin-top: 50px;
+            column-gap: 72px;
+            justify-content: center;
+            // max-width: 400px;
+        }
+
+        &__img {
             display: none;
+        }
+
+        &__contacts {
+            margin-top: 40px;
+        }
+    }
+
+    .footer-menu {
+        flex: 0 1 110px;
+    }
+
+    .footer-contacts {
+
+        &__top {
+            text-align: center;
+        }
+
+        &__bottom {
+            margin-top: 20px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 60px;
+        }
+
+        &__phone {
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 130%;
+  
+        }
+    
+        &__whatsapp {
+            
+        }
+    
+        &__email {
+            line-height: 130%;
+            color: $white;
+        }
+    }
+}
+
+
+@media (max-width: 320px) {
+    .footer-top {
+
+        &__container {
+            row-gap: 0;
+            // align-items: center;
+        }
+
+        &__logo {
+            width: 218px;
+            align-self: center;
+
+            .mobile-ring {
+                display: block;
+            }
+        }
+
+        &__nav {
+            margin: 50px auto 0 auto;
+            margin-top: 50px;
+            column-gap: 72px;
+            justify-content: center;
+            // max-width: 400px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__contacts {
+            margin-top: 40px;
+        }
+    }
+
+    .footer-menu {
+        flex: 0 1 110px;
+    }
+
+    .footer-contacts {
+
+        &__top {
+            text-align: center;
+        }
+
+        &__bottom {
+            margin-top: 20px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            column-gap: 30px;
+        }
+
+        &__phone {
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 130%;
+  
+        }
+    
+        &__whatsapp {
+            
+        }
+    
+        &__email {
+            line-height: 130%;
+            color: $white;
         }
     }
 }

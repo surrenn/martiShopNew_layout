@@ -6,6 +6,7 @@
 
 .header-bottom {
     padding: 20px 0;
+
     &__container {
         display: flex;
         align-items: center;
@@ -202,7 +203,7 @@
 @media (max-width: 600px) {
 
     .header-bottom {
-
+        padding: 20px 0;
         &__container {
             justify-content: space-between;
         }

@@ -43,10 +43,12 @@
 
 @media (max-width: 500px) {
     .footer-bottom {
-        
+        padding: 20px 0;
+        text-align: center;
+
         &__container {
             flex-direction: column;
-            row-gap: 10px;
+            row-gap: 20px;
         }
 
         &__rights {
@@ -54,7 +56,14 @@
         }
 
         &__info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
             order: 1;
+        }
+
+        &__offer {
+            margin: 0;
         }
     
     }
