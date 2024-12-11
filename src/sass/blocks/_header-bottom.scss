@@ -20,7 +20,7 @@
     &__catalog {
         border-radius: 10px;
         flex: 0 0 148px;
-        padding: 16px 25px;
+        padding: 15px 25px;
         background-color:  $yellow;
         font-weight: 500;
         font-size: 18px;
@@ -109,7 +109,8 @@
 
     &__btn {
         position: absolute;
-        top: 16px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 23px;
 
         img {
@@ -117,13 +118,45 @@
             height: 20px;
         }
     }
+
+    &__closer {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 24px;
+        height: 24px;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            background-color: $gray;
+            height: 2px;
+            width: 100%;
+            border-radius: 2px;
+
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }
+
 .actions {
     display: flex;
     column-gap: 30px;
     &__item {
     }
 }
+
 .actions-item {
     position: relative;
     display: flex;
@@ -156,6 +189,7 @@
 @media (max-width: 992px) {
     .header-bottom {
         padding: 20px 0;
+
         &__container {
             column-gap: 10px;
         }
@@ -206,10 +240,22 @@
         padding: 20px 0;
         &__container {
             justify-content: space-between;
+            position: relative;
         }
 
         &__search {
             display: none;
+            transition: all 0.5s;
+
+            &_active {
+                display: block;
+                position: absolute;
+                left: $containerPaddings;
+                right: $containerPaddings;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+            }
         }
 
         &__search-mob {
@@ -220,6 +266,21 @@
             align-items: center;
             width: 50px;
             height: 50px;
+        }
+    }
+
+    .header-form {
+
+        &__btn {
+            right: 53px;
+        }
+
+        &__closer {
+            display: block;
+        }
+
+        &__input {
+            padding-right: 85px;
         }
     }
 
