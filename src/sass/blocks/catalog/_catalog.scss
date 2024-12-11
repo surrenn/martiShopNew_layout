@@ -45,9 +45,10 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: -27px;
-                width: 14px;
-                height: 8px;
+                width: 16px;
+                height: 9px;
                 background: url("../icons/answer/arrow.svg");
+                background-repeat: no-repeat;
             }
         }
 
@@ -56,7 +57,7 @@
                 color: #4e7ffd;
 
                 &::before {
-                background: url("../icons/dropdown_arr_blue.svg");
+                background: url("../icons/dropdown_arr_blue.svg")  no-repeat;
                 background-size: 14px;
                 }
             }
@@ -130,15 +131,22 @@
 
     &__titles-list {
         padding: 20px 20px 15px 20px;
-        display: grid;
-        grid-template-columns: 209px repeat(10, 1fr);
+        display: flex;
+        justify-content: space-between;
+        column-gap: 17px;
     }
 
     &__titles-item {
         font-weight: 600;
         font-size: 15px;
         line-height: 130%;
-        padding: 0 5px;
+        flex: 1 1 60px;
+        white-space: nowrap;
+     
+
+        &:first-child {  
+            flex: 0 1 190px;
+        }
     }
 
     &__title-divider {
@@ -148,48 +156,10 @@
     }
 
     &__page {
-        padding: 0 20px 20px 20px;
-        display: grid;
-        grid-template-columns: 209px repeat(10, 1fr);
-    }
-
-    &__column {
-
-        &:last-child {
-
-            .catalog-table__item {
-                    padding: 12.25px 5px;
-            }
-        }
     }
 
 
     &__item {
-        padding: 20px 5px;
-        position: relative;
-        font-size: 15px;
-        line-height: 130%;
-
-        a {
-            font-size: 15px;
-            line-height: 130%;
-        }
-
-        &:not(:last-child) {
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 1px;
-                width: 100%;
-                background: #d5ddec;
-            }
-        }
-
-        &_red {
-            color: #ff4d47;
-        }
     }
 
     &__form {
@@ -207,11 +177,22 @@
     }
 
     &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid $yellow;
         border-radius: 5px;
         width: 35px;
         height: 35px;
         background: #fff8d5;
+
+        .gray-cart {
+            display: none;
+        }
+
+        .black-cart {
+            display: block;
+        }
 
         img {
             width: 18px;
@@ -226,6 +207,167 @@
     &__pagination {
         margin-top: 30px;
     }
+}
+
+.catalog-list {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 17px;
+        position: relative;
+        padding: 20px;
+
+        &_not-available {
+            color: $gray;
+
+            .gray-cart {
+                display: block;
+            }
+    
+            .black-cart {
+                display: none;
+            }
+
+            .catalog-table__btn {
+                background-color: $white;
+                border: 1px solid #d5ddec;
+            }
+        }
+
+        div {
+            flex: 1 1 60px;
+            // padding: 20px 0;
+            white-space: nowrap;
+
+            a {
+                white-space: wrap;
+            }
+
+            &:first-child { 
+                flex: 0 1 190px;
+            }
+        }
+
+        &:not(:last-child) {
+            &::before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                bottom: 0;
+                // width: 100%;
+                height: 1px;
+                background-color:  #d5ddec;
+            }
+        }
+
+      
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+
+    &__name {
+    }
+
+    &__code {
+    }
+
+    &__analogue {
+    }
+
+    &__size {
+    }
+
+    &__type {
+
+            flex: 1 0 60px;
+        
+    }
+
+    &__brand {
+    }
+
+    &__photo {
+        cursor: pointer;
+    }
+
+    &__avalaible {
+    }
+
+    &__wholesale {
+    }
+
+    &__retail {
+    }
+
+    &__cart {
+    }
+}
+
+.catalog-list-mob {
+    display: none;
+
+    &__item {
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 20px 15px;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+    }
+
+    &__value {
+        font-size: 14px;
+        line-height: 130%;
+    }
+
+    &__info {
+        margin-top: 15px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 8px;
+        }
+    }
+
+    &__divider {
+        width: 100%;
+        margin-top: 15px;
+        background: #d5ddec;
+        height: 1px;
+    }
+
+    &__cart-block {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.red {
+    color: #ff4d47;
 }
 
 
@@ -331,6 +473,48 @@
             margin: 0;
             display: block;
         }
+    }
+
+    .catalog-table {
+
+        &__titles {
+            display: none;
+        }
+
+        &__form{
+            input {
+                border: 1px solid #d5ddec;
+                border-radius: 5px;
+                width: 46px;
+                height: 40px;
+            }
+        }
+
+        &__btn {
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+            background-color: $yellow;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .catalog-list {
+        display: none;
+    }
+
+    .catalog-list-mob {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog {
+        padding-top: 20px;
     }
 }
 

@@ -119,10 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterBtn = document.querySelector('.catalog__hide span');
     const hideCaption = document.querySelector('.catalog__hide');
     
-    // filterBtn.addEventListener('click', () =>  {
-    //     formBlock.classList.toggle('catalog__form-block_active');
-    //     hideCaption.classList.toggle('catalog__hide_active');
-    // })
+    filterBtn.addEventListener('click', () =>  {
+        formBlock.classList.toggle('catalog__form-block_active');
+        hideCaption.classList.toggle('catalog__hide_active');
+    })
 
     //CATALOG-HEADER
     const catalogBtn = document.querySelector('.header-bottom__catalog');
