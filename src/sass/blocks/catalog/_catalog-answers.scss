@@ -1,0 +1,21 @@
+.main {
+
+    &__answers {
+    }
+}
+
+.catalog-answers {
+    padding: 60px 0 150px 0;
+
+    &__container {
+    }
+
+    &__answers-block {
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-answers {
+        padding: 20px 0 100px 0;
+    }
+}

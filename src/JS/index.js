@@ -112,17 +112,17 @@ document.addEventListener("DOMContentLoaded", () => {
         title.addEventListener("click", () => showText(index));
     });
 
-    // showText(titleIndex);
-
-    //CATALOG FILTER
+    // showText(titleIndex); 
+    
+    //CATALOG PAGE FILTER
     const formBlock  = document.querySelector('.catalog__form-block');
     const filterBtn = document.querySelector('.catalog__hide span');
     const hideCaption = document.querySelector('.catalog__hide');
     
-    filterBtn.addEventListener('click', () =>  {
-        formBlock.classList.toggle('catalog__form-block_active');
-        hideCaption.classList.toggle('catalog__hide_active');
-    })
+    // filterBtn.addEventListener('click', () =>  {
+    //     formBlock.classList.toggle('catalog__form-block_active');
+    //     hideCaption.classList.toggle('catalog__hide_active');
+    // })
 
     //CATALOG-HEADER
     const catalogBtn = document.querySelector('.header-bottom__catalog');

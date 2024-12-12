@@ -18,3 +18,13 @@
     }
 }
 
+@media(max-width: 768px) {
+    .other-categories {
+        padding-top: 50px;
+
+        
+        &__wrapper {
+            margin-top: 20px;
+        }
+    }
+}
