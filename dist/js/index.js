@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", () => show(index));
     })
 
-    show(imageIndex);
+    // show(imageIndex);
 
     //PRODUCT DESCR
     const titles = document.querySelectorAll('.product-descr__name');
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title.addEventListener("click", () => showText(index));
     });
 
-    showText(titleIndex); 
+    // showText(titleIndex); 
 
     //SIMILAR-SLIDER
     const similarPages = document.querySelectorAll('.similar-slider__page');
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    showPage(currentPage);
+    // showPage(currentPage);
     
     //CATALOG PAGE FILTER
     const formBlock  = document.querySelector('.catalog__form-block');

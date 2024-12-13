@@ -24,11 +24,18 @@
     display: flex;
     column-gap: 30px;
     align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
     &__wrapper {
-        flex: 0 0 840px;
+        flex: 1 1 840px;
         display: flex;
         flex-direction: column;
         row-gap: 15px;
+    }
+
+    &__input-wrapper {
+        margin-top: 15px;
     }
 
     &__block {
@@ -117,7 +124,6 @@
 .customer {
 
     &__wrapper {
-        margin-top: 15px;
         display: flex;
         column-gap: 30px;
         row-gap: 20px;
@@ -128,7 +134,6 @@
 .personal-data {
 
     &__wrapper {
-        margin-top: 15px;
         display: flex;
         column-gap: 30px;
         row-gap: 20px;
@@ -140,7 +145,6 @@
 .delivery {
 
     &__wrapper {
-        margin-top: 15px;
         display: flex;
         flex-direction: column;
         row-gap: 25px;
@@ -164,7 +168,6 @@
 .payment {
 
     &__wrapper {
-        margin-top: 15px;
     }
 }
 
@@ -172,7 +175,6 @@
 .comment {
 
     &__wrapper {
-        margin-top: 15px;
     }
 
     &__text {
@@ -293,23 +295,30 @@
     }
 
     &__discount {
-        display: inline-block;
+        display: block;
+        text-align: left;
         cursor: pointer;
-        margin-top: 20px;
+        margin: 20px auto 0 auto;
         line-height: 130%;
         color: $gray;
-        position: relative;
+     
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 9px;
-            right: -15px;
-            height: 0;
-            width: 0;
-            border: 5px solid transparent;
-            border-top-color: $gray;
+        span {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 6px;
+                right: -15px;
+                height: 0;
+                width: 0;
+                border: 5px solid transparent;
+                border-top-color: $gray;
+            }
         }
+
+      
     }
 
   
@@ -335,3 +344,139 @@
 }
 
 
+@media (max-width: 768px) {
+    .make-order {
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+        &__form {
+            margin-top: 15px;
+        }
+    }
+
+    .order-form {
+
+        &__wrapper {
+            row-gap: 10px;
+        }
+
+        &__block {
+            border-radius: 8px;
+            padding: 15px 15px 20px 15px;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__input-wrapper {
+            margin-top: 20px;
+        }
+
+        &__bordered-radio {
+
+            &_active {
+                padding: 32px 20px;
+            }
+        }
+
+        &__total {
+            flex: 1 1 auto;
+        }
+
+    }
+
+    .order-form__radio-label .order-form__option::before {
+        top: -4px;
+    }
+
+    .order-form__radio-label .order-form__option::after {
+        top: 5px;
+    }
+
+    .customer {
+        font-size: 14px;
+    }
+
+    .personal-data {
+
+        &__wrapper {
+            row-gap: 10px;
+        }
+    }
+
+    .delivery {
+        
+        &__radio-btns {
+            font-size: 15px;
+        }
+    }
+    
+    .payment {
+        font-size: 15px;
+    }
+
+    .total {
+        padding: 20px 15px 40px 15px;
+        
+        &__discount {
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+
+    .customer {
+        
+        &__wrapper {
+            flex-direction: column;
+            row-gap: 23px;
+        }
+
+    }
+
+    .delivery {
+
+        &__wrapper {
+            row-gap: 20px;
+        }
+
+        &__inputs {
+            row-gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .total {
+        
+        &__discount {
+            text-align: left;
+            
+            span {
+                display: block;
+
+                
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 385px) {
+    .delivery {
+        
+        &__radio-btns {
+        }
+    }
+    
+    .payment {
+        font-size: 13px;
+    }
+}

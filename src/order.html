@@ -194,10 +194,10 @@
                         <div class="order-form__block customer">
                             <h4 class="order-form__title">Оформить заказ как</h4>
     
-                            <div class="customer__wrapper">
+                            <div class="customer__wrapper order-form__input-wrapper">
                                 <div class="order-form__radio">
                                     <label for="new-customer" class="order-form__radio-label">
-                                        <input 
+                                        <input   
                                         type="radio" 
                                         class="order-form__radio-input" 
                                         name="howToOrder" 
@@ -237,7 +237,7 @@
                         <div class="order-form__block personal-data">
                             <h4 class="order-form__title">Личные данные</h4>
 
-                            <div class="personal-data__wrapper">
+                            <div class="personal-data__wrapper order-form__input-wrapper">
                                 <div class="order-form__input-box input-box">
                                     <div class="input-box__name">Имя*</div>
                                     <input class="input-box__input" required type="text" placeholder="Ваше имя">
@@ -264,12 +264,12 @@
                         <div class="order-form__block delivery">
                             <h4 class="order-form__title">Доставка</h4>
 
-                            <div class="delivery__wrapper">
+                            <div class="delivery__wrapper order-form__input-wrapper">
                                 <div class="delivery__radio-btns">
-                                    <div class="order-form__bordered-radio">
+                                    <div class="order-form__bordered-radio order-form__bordered-radio_active">
                                         <div class="order-form__radio">
                                             <label for="Казпочта" class="order-form__radio-label">
-                                                <input 
+                                                <input                                         
                                                 type="radio" 
                                                 class="order-form__radio-input" 
                                                 name="howToOrder" 
@@ -336,7 +336,7 @@
                         <div class="order-form__block payment">
                             <h4 class="order-form__title">Оплата</h4>
 
-                            <div class="delivery__radio-btns payment__wrapper">
+                            <div class="delivery__radio-btns payment__wrapper order-form__input-wrapper">
                                 <div class="order-form__bordered-radio">
                                     <div class="order-form__radio">
                                         <label for="onDelivery" class="order-form__radio-label">
@@ -384,7 +384,7 @@
                         <div class="order-form__block comment">
                             <h4 class="order-form__title">Комментарий к заказу</h4>
 
-                            <div class="comment__wrapper">
+                            <div class="comment__wrapper order-form__input-wrapper">
                                 <textarea name="comment" id="comment" class="comment__text" placeholder="Комментарий"></textarea>
                             </div>
                         </div>
@@ -434,7 +434,7 @@
                           </label>
                         </div>
 
-                        <div class="total__discount">Использовать купон для получения скидки</div>
+                        <div class="total__discount"><span>Использовать купон для получения скидки</span></div>
 
                         <div class="total__triangles">
                           <div class="total__elem"></div>
