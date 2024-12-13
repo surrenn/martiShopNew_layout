@@ -113,6 +113,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     showText(titleIndex); 
+
+    //SIMILAR-SLIDER
+    const similarPages = document.querySelectorAll('.similar-slider__page');
+    const similarArrows = document.querySelectorAll('.similar-slider__arr');
+    let currentPage = 0;
+
+    function showPage (index) {
+        similarPages[currentPage].classList.remove('similar-slider__page_active');
+        similarPages[index].classList.add('similar-slider__page_active');
+
+        currentPage = index;
+    }
+
+    similarArrows.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+    
+            if (e.target.classList.contains('similar__prev')) {
+                let index = currentPage - 1;
+    
+                if (index < 0) {
+                    index = similarPages.length - 1;
+                }
+    
+                showPage(index);
+            } else if (e.target.classList.contains('similar__next')) {
+                let index = currentPage  + 1;
+
+                if (index >= similarPages.length) {
+                    index = 0;
+                }
+                showPage(index);
+            }
+        });
+    });
+
+    showPage(currentPage);
     
     //CATALOG PAGE FILTER
     const formBlock  = document.querySelector('.catalog__form-block');

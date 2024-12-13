@@ -16,9 +16,9 @@
 
     &__wrapper {
         margin: 40px -13px 0 -13px;
-        display: flex;
-        row-gap: 27px;
-        flex-wrap: wrap;
+    }
+
+    &__similar-slider {
     }
 
     &__column {
@@ -29,6 +29,42 @@
     &__product-card {
     }
 }
+
+.similar-slider {
+    display: flex;
+    row-gap: 27px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+    &__page {
+        display: flex;
+        flex: 0 1 50%;
+    }
+
+    &__btns {
+        display: none;
+        column-gap: 10px;
+        position: absolute;
+        top: -48px;
+        right: 0;
+    }
+
+    &__arr {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 11px;
+            height: 22px;
+        }
+    }
+}
+
+
 
 .product-card {
     border-radius: 24px;
@@ -76,28 +112,6 @@
     }
 }
 
-@media (max-width: 1310px) {
-    .similar {
-
-    
-        &__container {
-        }
-    
-        &__title {
-        }
-    
-        &__wrapper {
-          justify-content: center;
-        }
-    
-        &__column {
-        }
-    
-        &__product-card {
-        }
-    }
-    
-}
 
 @media (max-width: 768px) {
     .similar {
@@ -105,19 +119,13 @@
         padding-bottom: 100px;
     
         &__wrapper {
-          margin: 40px 0 0 0;
+          margin: 20px 0 0 0;
         }
-    
-    }
-    
-}
 
-@media (max-width: 690px) {
-    .similar {
-    
         &__column {
-          flex: 0 1 175px;
-        }
+            padding: 0 5px;
+            flex: 0 1 175px;
+          }
     
     }
 
@@ -128,7 +136,7 @@
     
     
         &__img {
-            width: 155px;
+            max-width: 155px;
             height: 113px;
     
             img {
@@ -155,6 +163,41 @@
         }
     }
     
+    .similar-slider {
+        row-gap: 10px;  
     
+        &__page {
+            display: flex;
+            flex: 0 1 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .similar-slider {
+
+        &__page {
+            display: none;
+            flex: 0 1 360px;
+
+            &_active {
+                display: flex;
+            }
+        }
+
+        &__btns {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    .product-card {
+
+        &__img {
+            margin: 0 auto;
+            max-width: 125px;
+        }
+    }
 }
 
