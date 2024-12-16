@@ -90,6 +90,10 @@
         display: inline-block;
         line-height: 140%;
         margin-top: 20px;
+
+        &:hover {
+            color: #4e7ffd;
+        }
     }
 
     &__bottom {

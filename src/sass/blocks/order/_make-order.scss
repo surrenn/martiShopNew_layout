@@ -291,6 +291,10 @@
 
         a {
             color: #4e7ffd;
+
+            &:hover {
+                color: #ff4d47;
+            }
         }
     }
 

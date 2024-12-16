@@ -157,6 +157,10 @@
     &__all-info {
         line-height: 130%;
         color: #4e7ffd;
+        
+        &:hover {
+            color: #ff4d47;
+        }
     }
 
     &__actions {
@@ -173,8 +177,12 @@
     }
 
     &__add-btn {
-        background: #f2f4f7;
+        background: $backgroundColor;
         margin-top: 10px;
+
+        &:hover {
+            background: #e2e7ee;
+        }
     }
 }
 

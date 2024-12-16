@@ -52,7 +52,13 @@
     }
 
     &__menu-item {
+        
+    }
+
+    &__menu-link {
         padding-left: 15px;
+        line-height: 130%;
+
         position: relative;
 
         &::before {
@@ -66,10 +72,14 @@
             height: 5px;
             background: #2b2e3a;
         }
-    }
 
-    &__menu-link {
-        line-height: 130%;
+        &:hover {
+            color: #4e7ffd;
+
+            &::before {
+                background: #4e7ffd;
+            }   
+        }
     }
 
     &__color {

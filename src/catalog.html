@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <script src="./JS/index.js" defer></script>
+    <script src="./JS/catalogPage.js" defer></script>
+    <script src="./JS/answers.js" defer></script>
+    <script src="./JS/select.js" defer></script>
     <title>MartiShop</title>
   </head>
   <body>
@@ -213,9 +216,12 @@
                               <div class="catalog-form__input-box input-box">
                                   <div class="input-box__name">Тип</div>
                                   <div class="input-box__select-wrapper">
-                                      <select class="input-box__select" name="catalog-type" id="catalog-type">
-                                          <option selected class="selected">Выберите тип</option>
-                                      </select>
+                                    <select class="select" name="catalog-type">
+                                      <option disabled>Выберите тип</option>
+                                      <option value="1">Тип селекта #1</option>
+                                      <option value="2">Тип селекта #2</option>
+                                      <option value="3">Тип селекта #3</option>
+                                    </select>
                                   </div>
                               </div>
                           </div>
@@ -224,9 +230,12 @@
                               <div class="catalog-form__input-box input-box">
                                   <div class="input-box__name">Допуск</div>
                                   <div class="input-box__select-wrapper">
-                                      <select class="input-box__select" name="admission" id="admission">
-                                          <option selected>0,3</option>
-                                      </select>
+                                    <select class="select" name="catalog-type">
+                                      <option disabled>Допуск</option>
+                                      <option value="1">0,3</option>
+                                      <option value="2">Тип селекта #2</option>
+                                      <option value="3">Тип селекта #3</option>
+                                    </select>
                                   </div>
                               </div>
                           </div>
@@ -1116,6 +1125,9 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_ylw"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/racks.png" alt="Комплектующие для рулевых реек">
+                  </div>
                 </div>
               </div>
 
@@ -1130,6 +1142,9 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_orng"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/kits.png" alt="Ремкомплекты">
+                  </div>
                 </div>
               </div>
 
@@ -1145,6 +1160,9 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_grn"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/seals.png" alt="Сальники">
+                  </div>
                 </div>
               </div>
 
@@ -1158,6 +1176,9 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_blue"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/belts.png" alt="Ремни">
+                  </div>
                 </div>
               </div>
 
@@ -1172,6 +1193,9 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_prpl"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/rings.png" alt="Резиновые кольца">
+                  </div>
                 </div>
               </div>
 
@@ -1185,8 +1209,12 @@
                   </ul>
 
                   <div class="catalog-item__color catalog-item__color_pink"></div>
+                  <div class="catalog-item__img">
+                    <img src="./img/catalog-cards/cylinder.png" alt="Комплектующие гидроцилиндров">
+                  </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </section>
@@ -1351,5 +1379,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

@@ -46,30 +46,8 @@
             display: none;
         }
 
-        &_active {
-            column-gap: 12px;
-            padding: 16px 25px;
-
-            .catalog-open {
-                display: none;
-            }
-
-            .catalog-close {
-                display: block;
-            }
-        }
-
         &:hover {
-            column-gap: 12px;
-            padding: 16px 25px;
-
-            .catalog-open {
-                display: none;
-            }
-
-            .catalog-close {
-                display: block;
-            }
+            background: #ffe664;
 
             .catalog-select {
                 display: block;
@@ -134,7 +112,6 @@
         color: $gray;
         border-radius: 10px;
         padding: 15px 50px 15px 20px;
-      
     }
 
     &__btn {
@@ -183,6 +160,7 @@
 .actions {
     display: flex;
     column-gap: 30px;
+
     &__item {
     }
 }
@@ -192,6 +170,7 @@
     display: flex;
     column-gap: 4px;
     align-items: center;
+
     &__icon {
         width: 24px;
         height: 24px;
@@ -200,6 +179,10 @@
     &__name {
         line-height: 130%;
         color: $mainColor;
+
+        &:hover {
+            color: #4e7ffd;
+        }
     }
 
     &__circle {
@@ -231,8 +214,26 @@
         &__catalog {
           
             margin-right: 0;
+
+            &:hover {
+                .catalog-select {
+                    display: none;
+                }
+            }
+
+            &_active {
+                column-gap: 12px;
+                padding: 16px 25px;
     
-          
+                .catalog-open {
+                    display: none;
+                }
+    
+                .catalog-close {
+                    display: block;
+                }
+            }
+    
         }
     
         &__search {

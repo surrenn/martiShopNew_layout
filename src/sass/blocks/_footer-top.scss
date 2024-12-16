@@ -82,6 +82,10 @@
     &__link {
         line-height: 130%;
         color: $white;
+
+        &:hover {
+            color: $yellow;
+        }
     }
 }
 
@@ -103,6 +107,10 @@
         font-size: 22px;
         line-height: 130%;
         color: $white;
+
+        &:hover {
+            color: $yellow;
+        }
     }
 
     &__whatsapp {
@@ -123,6 +131,10 @@
     &__email {
         line-height: 130%;
         color: $white;
+
+        &:hover {
+            color: $yellow;
+        }
     }
 }
 

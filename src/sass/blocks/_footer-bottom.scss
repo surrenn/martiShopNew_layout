@@ -22,9 +22,16 @@
 
     &__offer {
         margin-right: 40px;
+        
+        &:hover {
+            color: $yellow;
+        }
     }
 
     &__confidential {
+        &:hover {
+            color: $yellow;
+        }
     }
 }
 

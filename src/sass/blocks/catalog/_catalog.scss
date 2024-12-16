@@ -114,6 +114,10 @@
         padding: 9px 31px;
         width: 136px;
         line-height: 130%;
+
+        &:hover {
+            background-color: $backgroundColor;
+        }
     }
 }
 

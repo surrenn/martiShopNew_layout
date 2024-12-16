@@ -51,6 +51,10 @@
         font-size: 15px;
         line-height: 130%;
         color: $gray;
+
+        &:hover {
+            color: $mainColor;
+        }
     }
 }
 
@@ -73,6 +77,9 @@
     &__info {
         flex-shrink: 0;
 
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
