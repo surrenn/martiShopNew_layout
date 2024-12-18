@@ -91,25 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //INPUTS
-    function checkInputText() {
-        if (input.value.trim() !== "") {
-          input.classList.add('has-text');
-        } else {
-          input.classList.remove('has-text');
-        }
-    }
-
     const inputs = document.querySelectorAll('input');
 
     if (inputs.length != 0) {
         inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                if (input.value.trim() !== "") {
-                    input.classList.add('has-text');
-                  } else {
-                    input.classList.remove('has-text');
-                  }
-            });
+            if (!input.classList.contains("cart-btn__input")) {
+                input.addEventListener('input', function() {
+                    if (input.value.trim() !== "") {
+                        input.classList.add('has-text');
+                    } else {
+                        input.classList.remove('has-text');
+                    }
+                });
+            }
         })
     }
 });

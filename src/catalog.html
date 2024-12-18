@@ -8,6 +8,7 @@
     <script src="./JS/catalogPage.js" defer></script>
     <script src="./JS/answers.js" defer></script>
     <script src="./JS/select.js" defer></script>
+    <script src="./JS/cart-btn.js" defer></script>
     <title>MartiShop</title>
   </head>
   <body>
@@ -273,7 +274,7 @@
                           <div class="catalog-table__page catalog-table__page_open">
                            
                             <ul class="catalog-table__catalog-list catalog-list">
-                              <li class="catalog-list__item">
+                              <li class="catalog-list__item catalog-list__item_not-available">
                                 <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
                                 <div class="catalog-list__code">F-0000E</div>
                                 <div class="catalog-list__analogue">HM001</div>
@@ -283,18 +284,15 @@
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
                                 </div>
-                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__avalaible">0</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
                                 <div class="catalog-list__retail red">150 345 ₸</div>
                                 <div class="catalog-list__cart">
-                                  cart
-                                  <!-- <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form> -->
+                                  <span class="catalog-list__cart-btn cart-btn cart-btn_disable">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
                                 </div>
                               </li>
                               <li class="catalog-list__item">
@@ -311,13 +309,221 @@
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
                                 <div class="catalog-list__retail red">150 345 ₸</div>
                                 <div class="catalog-list__cart">
-                                  <!-- <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form> -->
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
                                 </div>
                               </li>
                             </ul>
