@@ -41,8 +41,6 @@
         }
 
         .catalog-close {
-            width: 16px;
-            height: 16px;
             display: none;
         }
 
@@ -174,6 +172,10 @@
     &__icon {
         width: 24px;
         height: 24px;
+
+        &600 {
+            display: none;
+        }
     }
 
     &__name {
@@ -212,17 +214,18 @@
         }
 
         &__catalog {
-          
             margin-right: 0;
 
             &:hover {
+                background: $yellow;
+                
                 .catalog-select {
                     display: none;
                 }
             }
 
             &_active {
-                column-gap: 12px;
+                // column-gap: 12px;
                 padding: 16px 25px;
     
                 .catalog-open {
@@ -325,12 +328,20 @@
         height: 50px;
 
         &__icon {
-            width: 24px;
-            height: 24px;
+            display: none;
+
+            &600 {
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
         }
 
         &__circle {
-            display: none;
+            background-color: $yellow;
+            top: -10px;
+            right: -5px;
+            left:auto;
         }
        
     }

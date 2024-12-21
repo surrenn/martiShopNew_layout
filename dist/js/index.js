@@ -5,49 +5,51 @@ document.addEventListener("DOMContentLoaded", () => {
     //HAMBURGER AND MOBILE MENU
     const headerTop = document.querySelector('.header-top');
     const mobileMenu = document.querySelector('.mob-menu');
+    const hamburger = document.querySelector('.hamburger');
 
-    function isMobileMenuActive (elem) {
+    function isMobileMenuActive () {
 
-        if (elem.classList.contains('hamburger_active')) {
+        if (hamburger.classList.contains('hamburger_active')) {
             document.querySelector('body').style.overflow = 'hidden';
         } else {
             document.querySelector('body').style.overflow = 'scroll';
         }
     }
 
-    headerTop.addEventListener('click', (e) => {
-        const elem = e.target.parentElement;
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        mobileMenu.classList.toggle('mob-menu_active');
+        isMobileMenuActive();
 
-        if (elem.classList.contains('hamburger')) {
-            elem.classList.toggle('hamburger_active');
-            mobileMenu.classList.toggle('mob-menu_active');
-
-            isMobileMenuActive(elem);
-
+        if (hamburger.classList.contains('hamburger_active')) {
             mobileMenu.querySelectorAll('.mob-list__item').forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
 
-                    elem.classList.remove('hamburger_active');
+                    hamburger.classList.remove('hamburger_active');
                     mobileMenu.classList.remove('mob-menu_active');
 
-                    isMobileMenuActive(elem);
+                    isMobileMenuActive();
                 });
             });
-        };
+        }
+    })
 
-    });
+
 
     //HEADER BOTTOM SEARCH
     const searchBtn = document.querySelector('.header-bottom__search-mob');
     const searchCloser = document.querySelector('.header-form__closer');
     const search = document.querySelector('.header-bottom__search');
+    const actions = document.querySelector('.actions');
 
     searchBtn.addEventListener('click', () => {
         search.classList.add('header-bottom__search_active');
+        actions.style.display = 'none';
 
         searchCloser.addEventListener('click', () => {
             search.classList.remove('header-bottom__search_active');
+            actions.style.display = 'flex';
         });
     });
 

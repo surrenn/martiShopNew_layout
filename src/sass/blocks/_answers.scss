@@ -39,7 +39,8 @@
 
 
 .question {
-
+    min-height: 46px;
+    
     &__head {
         display: flex;
         justify-content: space-between;
@@ -59,10 +60,13 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        // transform: rotate(0deg);
+        transition: transform 0.5s;
     }
 
     &__body {
-        height: 0;
+        margin-top: 0;
+        max-height: 0;
         overflow: hidden;
         transition: all 0.5s;
     }
@@ -78,11 +82,15 @@
     }
 
     &_active {
-        .question__body {
-            height: auto;
-            min-height: 1px;
-            overflow: visible;
-            margin-top: 20px;
+        .question {
+
+            &__body {
+                margin-top: 20px;
+            }
+
+            &__arrow {
+                transform: rotate(-180deg) translateY(-50%);
+            }
         }
     }
 
@@ -134,7 +142,7 @@
         }
 
         &__arrow {
-            padding-top: 10px;
+            padding-top: 7px;
         }
 
         &__body {
