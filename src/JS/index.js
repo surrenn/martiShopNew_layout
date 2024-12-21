@@ -3,8 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //HAMBURGER AND MOBILE MENU
-    const headerTop = document.querySelector('.header-top');
-    const mobileMenu = document.querySelector('.mob-menu');
+    const mobileMenu = document.querySelector('.header-top__nav');
     const hamburger = document.querySelector('.hamburger');
 
     function isMobileMenuActive () {
@@ -18,16 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
-        mobileMenu.classList.toggle('mob-menu_active');
+        mobileMenu.classList.toggle('header-top__nav_active');
         isMobileMenuActive();
 
         if (hamburger.classList.contains('hamburger_active')) {
-            mobileMenu.querySelectorAll('.mob-list__item').forEach(item => {
+            mobileMenu.querySelectorAll('.header-menu__item').forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
 
                     hamburger.classList.remove('hamburger_active');
-                    mobileMenu.classList.remove('mob-menu_active');
+                    mobileMenu.classList.remove('header-top__nav_active');
 
                     isMobileMenuActive();
                 });
@@ -60,36 +59,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileLists = document.querySelectorAll('.catalog-header__mob-wrapper');
 
 
-    catalogBtn.addEventListener('click', () => {
-        catalogBtn.classList.toggle("header-bottom__catalog_active");
-        catalogHeader.classList.toggle("catalog-header_active");
+    // catalogBtn.addEventListener('click', () => {
+    //     catalogBtn.classList.toggle("header-bottom__catalog_active");
+    //     catalogHeader.classList.toggle("catalog-header_active");
         
-        mobileItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                const mobItem = mobileLists[index - 1];
-                const backBtn = mobItem.querySelector('.catalog-header__back');
+    //     mobileItems.forEach((item, index) => {
+    //         item.addEventListener('click', () => {
+    //             const mobItem = mobileLists[index - 1];
+    //             const backBtn = mobItem.querySelector('.catalog-header__back');
 
-                mobItem.classList.add('catalog-header__mob-wrapper_active');
-                document.querySelector('body').style.overflow = 'hidden';
+    //             mobItem.classList.add('catalog-header__mob-wrapper_active');
+    //             document.querySelector('body').style.overflow = 'hidden';
 
-                backBtn.addEventListener('click', () => {
-                    mobItem.classList.remove('catalog-header__mob-wrapper_active');
-                });
+    //             backBtn.addEventListener('click', () => {
+    //                 mobItem.classList.remove('catalog-header__mob-wrapper_active');
+    //             });
 
-                const innerItems = document.querySelectorAll('.catalog-header__inner-item');
+    //             const innerItems = document.querySelectorAll('.catalog-header__inner-item');
                 
-                innerItems.forEach(innerItem => {
-                    innerItem.addEventListener('click', (e) => {
-                        e.preventDefault();
+    //             innerItems.forEach(innerItem => {
+    //                 innerItem.addEventListener('click', (e) => {
+    //                     e.preventDefault();
 
-                        catalogBtn.classList.remove("header-bottom__catalog_active");
-                        catalogHeader.classList.remove("catalog-header_active");
-                    })
-                })
+    //                     catalogBtn.classList.remove("header-bottom__catalog_active");
+    //                     catalogHeader.classList.remove("catalog-header_active");
+    //                 })
+    //             })
 
-            });
-        });
-    });   
+    //         });
+    //     });
+    // });   
 
 
     //INPUTS

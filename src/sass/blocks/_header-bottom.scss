@@ -204,6 +204,7 @@
 @media (max-width: 992px) {
     .header-bottom {
         padding: 20px 0;
+        position: relative;
 
         &__container {
             column-gap: 10px;
@@ -215,6 +216,7 @@
 
         &__catalog {
             margin-right: 0;
+            position: inherit;
 
             &:hover {
                 background: $yellow;
@@ -225,8 +227,6 @@
             }
 
             &_active {
-                // column-gap: 12px;
-                padding: 16px 25px;
     
                 .catalog-open {
                     display: none;
@@ -235,12 +235,15 @@
                 .catalog-close {
                     display: block;
                 }
+
+                .catalog-select {
+                    display: block;
+                }
             }
     
         }
     
         &__search {
-           
             margin-right: 0;
         }
     }
