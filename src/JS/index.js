@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //CATALOG-HEADER
-    const catalogBtn = document.querySelector('.header-bottom__catalog');
-    const catalogHeader = document.querySelector('.catalog-header');
-    const mobileItems = document.querySelectorAll('.catalog-header__item');
-    const mobileLists = document.querySelectorAll('.catalog-header__mob-wrapper');
+    // const catalogBtn = document.querySelector('.header-bottom__catalog');
+    // const catalogHeader = document.querySelector('.catalog-header');
+    // const mobileItems = document.querySelectorAll('.catalog-header__item');
+    // const mobileLists = document.querySelectorAll('.catalog-header__mob-wrapper');
 
 
     // catalogBtn.addEventListener('click', () => {
@@ -89,6 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //         });
     //     });
     // });   
+
+    // const area = document.querySelector('.catalog-select__inner_active');
+
+    // area.addEventListener('click', (e) => {
+    //     console.log(e.target);
+    // });
 
 
     //INPUTS

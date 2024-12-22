@@ -35,22 +35,21 @@
         }
 
 
-        .catalog-open {
-            display: block;
+        // .catalog-open {
+        //     display: block;
+        // }
 
-        }
+        // .catalog-close {
+        //     display: none;
+        // }
 
-        .catalog-close {
-            display: none;
-        }
+        // &:hover {
+        //     background: #ffe664;
 
-        &:hover {
-            background: #ffe664;
-
-            .catalog-select {
-                display: block;
-            }
-        }
+        //     .catalog-select {
+        //         display: block;
+        //     }
+        // }
 
         &::before {
             content: "";
@@ -203,7 +202,6 @@
 
 @media (max-width: 992px) {
     .header-bottom {
-        padding: 20px 0;
         position: relative;
 
         &__container {
@@ -216,30 +214,34 @@
 
         &__catalog {
             margin-right: 0;
-            position: inherit;
+            position: unset;
 
-            &:hover {
-                background: $yellow;
+            &::before {
+                display: none;
+            }
+
+            // &:hover {
+            //     background: $yellow;
                 
-                .catalog-select {
-                    display: none;
-                }
-            }
+            //     .catalog-select {
+            //         display: none;
+            //     }
+            // }
 
-            &_active {
+            // &_active {
     
-                .catalog-open {
-                    display: none;
-                }
+            //     .catalog-open {
+            //         display: none;
+            //     }
     
-                .catalog-close {
-                    display: block;
-                }
+            //     .catalog-close {
+            //         display: block;
+            //     }
 
-                .catalog-select {
-                    display: block;
-                }
-            }
+            //     .catalog-select {
+            //         display: block;
+            //     }
+            // }
     
         }
     
@@ -274,10 +276,10 @@
 @media (max-width: 600px) {
 
     .header-bottom {
-        padding: 20px 0;
+
         &__container {
             justify-content: space-between;
-            position: relative;
+            // position: relative;
         }
 
         &__search {
