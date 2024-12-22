@@ -89,12 +89,46 @@ document.addEventListener("DOMContentLoaded", () => {
     //         });
     //     });
     // });   
+    const catalogBtnWrapper = document.querySelector('.header-bottom__catalog-btn-wrapper');
+    const catalogSelect = document.querySelector('.catalog-select');
 
-    // const area = document.querySelector('.catalog-select__inner_active');
+    catalogBtnWrapper.addEventListener('click', () => {
+        catalogBtnWrapper.classList.toggle('header-bottom__catalog-btn-wrapper_active');
+        catalogSelect.classList.toggle('catalog-select_active');
 
-    // area.addEventListener('click', (e) => {
-    //     console.log(e.target);
-    // });
+        if (catalogBtnWrapper.classList.contains('header-bottom__catalog-btn-wrapper_active') && catalogSelect.classList.contains('catalog-select_active')) {
+            document.querySelector('body').style.overflow = 'hidden';
+
+            catalogSelect.querySelectorAll('.catalog-select__item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const catalogInner = item.querySelector('.catalog-select__inner');
+                    const catalogCloser = catalogInner.querySelector('.catalog-select__back');
+
+                    catalogInner.classList.add('catalog-select__inner_active');
+
+                    catalogInner.querySelectorAll('.catalog-select__inner-item').forEach(innerItem => {
+                        innerItem.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            catalogInner.classList.remove('catalog-select__inner_active');
+                            catalogSelect.classList.remove('catalog-select_active');
+                            catalogBtnWrapper.classList.remove('header-bottom__catalog-btn-wrapper_active');
+                            e.stopPropagation();
+                        });
+                    });
+
+                    catalogCloser.addEventListener('click', (e) => {
+                        catalogInner.classList.remove('catalog-select__inner_active');
+                        e.stopPropagation();
+                    });
+                    
+                });
+            });
+        } else {
+            document.querySelector('body').style.overflow = 'scroll';
+        }
+
+    });
+
 
 
     //INPUTS

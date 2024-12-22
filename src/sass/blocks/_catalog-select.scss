@@ -22,6 +22,7 @@
     top: 115%;
     left: 0;
     width: 420px;
+    z-index: 3;
 
     &__menu {
         width: 100%;
@@ -32,7 +33,7 @@
         cursor: pointer;
         position: relative;
 
-        &::before {
+        &::after {
             content: "";
             position: absolute;
             top: 50%;
@@ -44,7 +45,7 @@
         }
 
         &:first-child {
-            &::before {
+            &::after {
                 content: "";
                 width: 15px;
                 height: 15px;
@@ -91,6 +92,7 @@
     }
 
     &__back {
+        display: none;
         position: relative;
         padding-left: 32px;
         line-height: 130%;
@@ -136,6 +138,7 @@
         }
     }
     .catalog-select {
+        overflow: scroll;
         display: block;
         width: 100%;
         height: 100vh;
@@ -144,16 +147,33 @@
         padding: 12.5px 0;
         border-top: 1px solid $backgroundColor;
         z-index: 3;
+        transition: all 0.5s;
 
         &_active {
             left: 0;
         }
 
         &__item {
-            // position: inherit; //
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: unset;
+    
+            &::after {
+                content: "";
+                display: block;
+                position: unset;
+                transform: translateY(0);
+            }
+        }
+    
+
+        &__back {
+            display: inline-block;
         }
 
         &__inner {
+            overflow: scroll;
             display: block;
             width: 100%;
             height: 100vh;
@@ -161,7 +181,7 @@
             top: 0;
             border-radius: 0;
             box-shadow: none;
-            padding: 22px 15px;
+            padding: 22px 15px 50px 15px;
             z-index: 4;
             transition: all 0.5s;
 
