@@ -53,42 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //CATALOG-HEADER
-    // const catalogBtn = document.querySelector('.header-bottom__catalog');
-    // const catalogHeader = document.querySelector('.catalog-header');
-    // const mobileItems = document.querySelectorAll('.catalog-header__item');
-    // const mobileLists = document.querySelectorAll('.catalog-header__mob-wrapper');
-
-
-    // catalogBtn.addEventListener('click', () => {
-    //     catalogBtn.classList.toggle("header-bottom__catalog_active");
-    //     catalogHeader.classList.toggle("catalog-header_active");
-        
-    //     mobileItems.forEach((item, index) => {
-    //         item.addEventListener('click', () => {
-    //             const mobItem = mobileLists[index - 1];
-    //             const backBtn = mobItem.querySelector('.catalog-header__back');
-
-    //             mobItem.classList.add('catalog-header__mob-wrapper_active');
-    //             document.querySelector('body').style.overflow = 'hidden';
-
-    //             backBtn.addEventListener('click', () => {
-    //                 mobItem.classList.remove('catalog-header__mob-wrapper_active');
-    //             });
-
-    //             const innerItems = document.querySelectorAll('.catalog-header__inner-item');
-                
-    //             innerItems.forEach(innerItem => {
-    //                 innerItem.addEventListener('click', (e) => {
-    //                     e.preventDefault();
-
-    //                     catalogBtn.classList.remove("header-bottom__catalog_active");
-    //                     catalogHeader.classList.remove("catalog-header_active");
-    //                 })
-    //             })
-
-    //         });
-    //     });
-    // });   
     const catalogBtnWrapper = document.querySelector('.header-bottom__catalog-btn-wrapper');
     const catalogSelect = document.querySelector('.catalog-select');
 
