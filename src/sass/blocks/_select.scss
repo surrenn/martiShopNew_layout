@@ -25,6 +25,7 @@
     font-size: 14px;
     color: $mainColor;
     background-color: #fff;
+    outline: 1px solid $yellow;
 }
 
 .new-select__list {
@@ -63,7 +64,6 @@
     position: absolute;
     right: 18px;
     top: 18px;
-    transform: translateY(-50%);
     background: url('../icons/dropdown_arr.svg') no-repeat right center / cover;
     opacity: 0.6;
     transition: all .27s ease-in-out;

@@ -25,7 +25,6 @@
         width: 100%;
         background-color: #fff;
         padding: 20px;
-        transition: height 3s 0s ease;
     }
 
     &__hide {
@@ -43,12 +42,13 @@
                 content: "";
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%);
                 right: -27px;
-                width: 16px;
-                height: 9px;
-                background: url("../icons/answer/arrow.svg");
+                width: 14px;
+                height: 8px;
+                background: url("../icons/dropdown_arr_black.svg");
                 background-repeat: no-repeat;
+                transition: all .27s ease-in-out;
+                transform: rotate(180deg) translateY(30%);
             }
         }
 
@@ -57,8 +57,8 @@
                 color: #4e7ffd;
 
                 &::before {
-                background: url("../icons/dropdown_arr_blue.svg")  no-repeat;
-                background-size: 14px;
+                    background: url("../icons/dropdown_arr_blue.svg")  no-repeat;
+                    transform: rotate(0deg) translateY(-50%);
                 }
             }
         }
@@ -73,6 +73,8 @@
 .catalog-form {
     display: flex;
     column-gap: 20px;
+    align-items: flex-start;
+
 
     &__dimensions {
         display: flex;
@@ -128,6 +130,7 @@
     padding: 0 10px 8px 10px;
 
     &__item {
+        flex-shrink: 0;
         min-height: 59px;
         border-radius: 6px;
         display: flex;
@@ -147,6 +150,8 @@
             padding: 20px 10px;
             position: relative;
             min-height: 100%;
+            min-width: 0;
+            word-wrap: break-word;
 
             &:not(:last-child)::after {
                 content: "";
@@ -211,7 +216,32 @@
     &__photo {
         flex: 0 1 63px;
         cursor: pointer;
-        text-align: center;    
+        text-align: center; 
+        
+        &:hover {
+            .catalog-list__hover-img {
+                display: block;
+            }
+        }
+    }
+
+    &__hover-img {
+        display: none;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__avalaible {
@@ -267,11 +297,6 @@
     }
 
     &__page {
-        display: none;
-
-        &_open {
-            display: block;
-        }
     }
 
 
@@ -434,9 +459,46 @@
     }
 }
 
+@media (max-width: 1135px) {
+    .catalog-form {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 10px;
+
+        &-wrapper {
+            padding: -5px;
+        }
+
+        &__type {
+            flex: 1 1 200px;
+        }
+
+        &__admission {
+            flex: 1 1 100px;
+        }
+
+        &__actions {
+            padding-top: 0;
+            flex: 1 1 100%;
+            flex-direction: column;
+            row-gap: 10px;
+            
+        }
+    
+        &__apply {
+           width: 100%;
+        }
+    
+        &__reset {
+            width: 100%;
+        }
+    }
+}
+
 
 
 @media (max-width: 1090px) {
+
     .catalog-table {
 
         &__titles-item {
@@ -456,29 +518,35 @@
     .catalog {
 
         &__form-block {
-            padding: 15px 0;
-            min-height: 50px;
+            padding: 15px;
+            // min-height: 50px;
 
-            .catalog__form  {
-                display: none;
+            .catalog__form-wrapper  {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s;
             }
 
-            &_active  {
-                padding: 20px;
+            // &_active  {
+            //     padding: 20px;
 
-                .catalog__form  {
-                    display: flex;
-                }
+            //     .catalog__form  {
+            //         display: flex;
+            //     }
 
-                .catalog__hide {
-                    margin-top: 20px;
-                }
-            }
+            //     .catalog__hide {
+            //         margin-top: 20px;
+            //     }
+            // }
         }
 
         &__hide {
             margin: 0;
             display: block;
+
+            &_active {
+                margin-top: 20px;
+            }
         }
     }
 

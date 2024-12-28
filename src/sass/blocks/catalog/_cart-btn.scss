@@ -10,7 +10,7 @@
     justify-content: center;
     outline: 1px solid #d5ddec;
     border-radius: 5px;
-    width: 86px;
+    max-width: 86px;
     height: 35px;
     background: #fff;
     padding: 11px 25px;
@@ -69,7 +69,6 @@
     &_active {
         background: #b7ffdd;
         outline: none;
-        // border: none;
         input {
             background: #b7ffdd;
         }

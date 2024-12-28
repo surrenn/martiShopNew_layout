@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <script src="./JS/index.js" defer></script>
-    <script src="./JS/catalogPage.js" defer></script>
+    <script src="./JS/catalog-filter.js" defer></script>
     <script src="./JS/answers.js" defer></script>
     <script src="./JS/select.js" defer></script>
     <script src="./JS/cart-btn.js" defer></script>
@@ -20,17 +20,19 @@
               <img src="./icons/logo.svg" alt="MartiShop">
             </a>
 
-            <nav class="header-top__nav">
-              <ul class="header-top__header-menu header-menu">
-                <div class="header-menu__item"><a href="productPage.html" class="header-menu__link">О нас</a></div>
-                <div class="header-menu__item"><a href="order.html" class="header-menu__link">Доставка</a></div>
-                <div class="header-menu__item"><a href="" class="header-menu__link">Оплата</a></div>
-                <div class="header-menu__item"><a href="" class="header-menu__link">Автосервис</a></div>
-                <div class="header-menu__item"><a href="" class="header-menu__link">Оптовикам</a></div>
-                <div class="header-menu__item"><a href="" class="header-menu__link">Вопрос-ответ</a></div>
-                <div class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></div>
-              </ul>
-            </nav>
+            <div class="header-top__nav">
+              <nav>
+                <ul class="header-top__header-menu header-menu">
+                  <li class="header-menu__item"><a href="productPage.html" class="header-menu__link">О нас</a></li>
+                  <li class="header-menu__item"><a href="order.html" class="header-menu__link">Доставка</a></li>
+                  <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Оплата</a></li>
+                  <li class="header-menu__item"><a href="successOrder.html" class="header-menu__link">Автосервис</a></li>
+                  <li class="header-menu__item"><a href="" class="header-menu__link">Оптовикам</a></li>
+                  <li class="header-menu__item"><a href="" class="header-menu__link">Вопрос-ответ</a></li>
+                  <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
 
             <div class="header-top__socials socials">
               <a href="tel:88007753148" class="socials__item">
@@ -43,26 +45,12 @@
             </div>
 
             <div class="header__hamburger hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
+              <div class="hamburger__wrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
-          </div>
-
-          <div class="mob-menu">
-            <nav class="mob-menu__nav">
-              <ul class="mob-menu__mob-list mob-list">
-                <li class="mob-list__item"><a href="">Вопрос-ответ</a></li>
-                <li class="mob-list__item"><a href="">Оптовикам</a></li>
-                <li class="mob-list__item"><a href="">Оплата</a></li>
-                <li class="mob-list__item"><a href="">Доставка</a></li>
-                <li class="mob-list__item"><a href="">Контакты</a></li>
-                <li class="mob-list__item"><a href="">О нас</a></li>
-                <li class="mob-list__item"><a href="">Автосервис</a></li>
-                <li class="mob-list__item"><a href="">Автосервис</a></li>
-                <li class="mob-list__item"><a href="">Автосервис</a></li>
-              </ul>
-            </nav>
           </div>
         </div>
 
@@ -77,9 +65,56 @@
             </a>
   
             <div class="header-bottom__catalog">
-              <img src="./icons/header/catalog.svg" alt="catalog" class="catalog-open">
-              <img src="./icons/catalog-closer.svg" alt="close" class="catalog-close">
-              <div>Каталог</div>
+              <div class="header-bottom__catalog-btn-wrapper">
+                <img src="./icons/header/catalog.svg" alt="catalog" class="catalog-open">
+                <img src="./icons/catalog-closer.svg" alt="close" class="catalog-close">
+                <div class="header-bottom__catalog-caption">Каталог</div>
+              </div>
+
+              <div class="header-bottom__catalog-select catalog-select">
+                <ul class="catalog-select__menu">
+                  <li class="catalog-select__item">
+                    <a href="">Акции</a>
+                  </li>
+                  <li class="catalog-select__item">
+                    Комплектующие для рулевых реек
+
+
+                    <div class="catalog-select__inner">
+                      <div class="catalog-select__back">Назад</div>
+
+                      <ul class="catalog-select__inner-menu">
+                        <li class="catalog-select__inner-item"><a href="">Рулевых реек</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Гидромоторов</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Гидроцилиндров</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Мототехники</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="catalog-select__item">
+                    Комплектующие для рулевых реек
+
+
+                    <div class="catalog-select__inner">
+                      <div class="catalog-select__back">Назад</div>
+
+                      <ul class="catalog-select__inner-menu">
+                        <li class="catalog-select__inner-item"><a href="">Рулевых реек</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Гидромоторов</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Гидроцилиндров</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Мототехники</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                        <li class="catalog-select__inner-item"><a href="">Различного применения</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
   
             <div class="header-bottom__search">
@@ -88,6 +123,10 @@
                 <button type="submit" class="header-form__btn">
                   <img src="./icons/header/search.svg" alt="search">
                 </button>
+                <div class="header-form__closer">
+                  <span></span>
+                  <span></span>
+                </div>
               </form>
             </div>
 
@@ -100,92 +139,18 @@
 
               <a href="" class="actions__item actions-item">
                 <img src="./icons/header/profile.svg" alt="profile" class="actions-item__icon">
+                <img src="./icons/header/profile600.svg" alt="profile" class="actions-item__icon600">
                 <div class="actions-item__name">Профиль</div>
               </a>
               <a href="" class="actions__item actions-item">
                 <img src="./icons/header/basket.svg" alt="basket" class="actions-item__icon">
+                <img src="./icons/header/basket600.svg" alt="basket" class="actions-item__icon600">
                 <div class="actions-item__name">Корзина</div>
                 <div class="actions-item__circle">109</div>
               </a>
             </div>
           </div>
         </div>
-
-        <div class="header__catalog-header catalog-header">
-          <div class="catalog-header__container _container">
-            <div class="catalog-header__nav-block">
-              <nav class="catalog-header__nav">
-                <ul class="catalog-header__menu-list">
-                  <li class="catalog-header__item">
-                    <a href="">Акции</a>
-
-                    <img src="./icons/discount.svg" alt="discount">
-                  </li>
-
-                  <li class="catalog-header__item">
-                    Комплектующие для рулевых реек
-
-                    <div class="catalog-header__wrapper">
-                      <ul class="catalog-header__inner">            
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Втулки</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Хомуты</a></li>
-                      </ul> 
-                    </div>
-                   
-
-                    <img src="./icons/catalog-header_arr.svg" alt="arr">
-                  </li>
-
-                   <li class="catalog-header__item">
-                    Ремкомплекты
-
-                    <div class="catalog-header__wrapper">
-                      <ul class="catalog-header__inner">            
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Рулевых реек</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Рулевых редукторов</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гидроцилиндров</a></li>
-                        <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Мототехники</a></li>
-                      </ul>
-                    </div>
-                  
-                    <img src="./icons/catalog-header_arr.svg" alt="arr">
-                  </li>
-                </ul>
-
-                <div class="catalog-header__mob-catalog">
-                  <div class="catalog-header__mob-wrapper">
-                    <div class="catalog-header__back">Назад</div>
-
-                    <ul class="catalog-header__inner">            
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гайки</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Втулки</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Хомуты</a></li>
-                    </ul> 
-                  </div>
-
-                  <div class="catalog-header__mob-wrapper">
-                    <div class="catalog-header__back">Назад</div>
-
-                    <ul class="catalog-header__inner">            
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Рулевых реек</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Рулевых редукторов</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Гидроцилиндров</a></li>
-                      <li class="catalog-header__inner-item"><a href="" class="catalog-header__inner-link">Мототехники</a></li>
-                    </ul>
-                  </div>
-                </div> 
-
-              </nav>
-            </div>
-          </div>
-        </div>
-
-     
       </header>
 
       <main class="main">
@@ -195,57 +160,59 @@
 
                 <div class="catalog__wrapper">
                     <div class="catalog__form-block">
-                      <form action="" class="catalog__form catalog-form">
-                          <div class="catalog-form__dimensions">
-                              <div class="catalog-form__input-box input-box">
-                                  <div class="input-box__name">Д вн.</div>
-                                  <input class="input-box__input" type="number" placeholder="мм">
-                              </div>
-  
-                              <div class="catalog-form__input-box input-box">
-                                  <div class="input-box__name">Д нар.</div>
-                                  <input class="input-box__input" type="number" placeholder="мм">
-                              </div>
-  
-                              <div class="catalog-form__input-box input-box">
-                                  <div class="input-box__name">Высота</div>
-                                  <input class="input-box__input" type="number" placeholder="мм">
-                              </div>
-                          </div>
-      
-                          <div class="catalog-form__type">
-                              <div class="catalog-form__input-box input-box">
-                                  <div class="input-box__name">Тип</div>
-                                  <div class="input-box__select-wrapper">
-                                    <select class="select" name="catalog-type">
-                                      <option disabled>Выберите тип</option>
-                                      <option value="1">Тип селекта #1</option>
-                                      <option value="2">Тип селекта #2</option>
-                                      <option value="3">Тип селекта #3</option>
-                                    </select>
-                                  </div>
-                              </div>
-                          </div>
-      
-                          <div class="catalog-form__admission">
-                              <div class="catalog-form__input-box input-box">
-                                  <div class="input-box__name">Допуск</div>
-                                  <div class="input-box__select-wrapper">
-                                    <select class="select" name="catalog-type">
-                                      <option disabled>Допуск</option>
-                                      <option value="1">0,3</option>
-                                      <option value="2">Тип селекта #2</option>
-                                      <option value="3">Тип селекта #3</option>
-                                    </select>
-                                  </div>
-                              </div>
-                          </div>
-      
-                          <div class="catalog-form__actions">
-                              <button type="submit" class="btn_ylw catalog-form__apply">Применить</button>
-                              <button class="catalog-form__reset">Сбросить</button>
-                          </div>
-                      </form>
+                      <div class="catalog__form-wrapper">
+                        <form action="" class="catalog__form catalog-form">
+                            <div class="catalog-form__dimensions">
+                                <div class="catalog-form__input-box input-box">
+                                    <div class="input-box__name">Д вн.</div>
+                                    <input class="input-box__input" type="number" placeholder="мм">
+                                </div>
+    
+                                <div class="catalog-form__input-box input-box">
+                                    <div class="input-box__name">Д нар.</div>
+                                    <input class="input-box__input" type="number" placeholder="мм">
+                                </div>
+    
+                                <div class="catalog-form__input-box input-box">
+                                    <div class="input-box__name">Высота</div>
+                                    <input class="input-box__input" type="number" placeholder="мм">
+                                </div>
+                            </div>
+        
+                            <div class="catalog-form__type">
+                                <div class="catalog-form__input-box input-box">
+                                    <div class="input-box__name">Тип</div>
+                                    <div class="input-box__select-wrapper">
+                                      <select class="select" name="catalog-type">
+                                        <option disabled>Выберите тип</option>
+                                        <option value="1">Тип селекта #1</option>
+                                        <option value="2">Тип селекта #2</option>
+                                        <option value="3">Тип селекта #3</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="catalog-form__admission">
+                                <div class="catalog-form__input-box input-box">
+                                    <div class="input-box__name">Допуск</div>
+                                    <div class="input-box__select-wrapper">
+                                      <select class="select" name="catalog-type">
+                                        <option disabled>Допуск</option>
+                                        <option value="1">0,3</option>
+                                        <option value="2">Тип селекта #2</option>
+                                        <option value="3">Тип селекта #3</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="catalog-form__actions">
+                                <button type="submit" class="btn_ylw catalog-form__apply">Применить</button>
+                                <button class="catalog-form__reset">Сбросить</button>
+                            </div>
+                        </form>
+                      </div>
 
                       <div class="catalog__hide"><span>Скрыть фильтр</span></div>
                     </div>
@@ -271,7 +238,7 @@
                             <div class="catalog-table__title-divider"></div>
                           </div>
 
-                          <div class="catalog-table__page catalog-table__page_open">
+                          <div class="catalog-table__page">
                            
                             <ul class="catalog-table__catalog-list catalog-list">
                               <li class="catalog-list__item catalog-list__item_not-available">
@@ -283,6 +250,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">0</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -296,18 +267,22 @@
                                 </div>
                               </li>
                               <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__name"><a href="">30*45 садл</a></div>
+                                <div class="catalog-list__code">00014</div>
                                 <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__size">30x45</div>
                                 <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__brand">Trialli</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
+                                <div class="catalog-list__avalaible">2403</div>
+                                <div class="catalog-list__wholesale">280 ₸</div>
+                                <div class="catalog-list__retail red">340 ₸</div>
                                 <div class="catalog-list__cart">
                                   <span class="catalog-list__cart-btn cart-btn">
                                     <span class="cart-btn__btn cart-btn__prev"></span>
@@ -325,27 +300,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <span class="catalog-list__cart-btn cart-btn">
-                                    <span class="cart-btn__btn cart-btn__prev"></span>
-                                    <input type="number" class="cart-btn__input" placeholder="0">
-                                    <span class="cart-btn__btn cart-btn__next"></span>
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
                                   </span>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -367,6 +325,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -388,6 +350,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -409,6 +375,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -430,6 +400,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -451,6 +425,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -472,6 +450,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -493,6 +475,10 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -514,6 +500,35 @@
                                 <div class="catalog-list__brand">NHK</div>
                                 <div class="catalog-list__photo">
                                   <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
+                                </div>
+                                <div class="catalog-list__avalaible">123</div>
+                                <div class="catalog-list__wholesale">120 345 ₸</div>
+                                <div class="catalog-list__retail">150 345 ₸</div>
+                                <div class="catalog-list__cart">
+                                  <span class="catalog-list__cart-btn cart-btn">
+                                    <span class="cart-btn__btn cart-btn__prev"></span>
+                                    <input type="number" class="cart-btn__input" placeholder="0">
+                                    <span class="cart-btn__btn cart-btn__next"></span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="catalog-list__item">
+                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
+                                <div class="catalog-list__code">F-0000E</div>
+                                <div class="catalog-list__analogue">HM001</div>
+                                <div class="catalog-list__size">8x10/12x14.5</div>
+                                <div class="catalog-list__type">L-RING</div>
+                                <div class="catalog-list__brand">NHK</div>
+                                <div class="catalog-list__photo">
+                                  <img src="./icons/catalog/photo.svg" alt="photo">
+
+                                  <span class="catalog-list__hover-img">
+                                    <img src="./img/productPage/good/slider_img.png" alt="30*45 садл">
+                                  </span>
                                 </div>
                                 <div class="catalog-list__avalaible">123</div>
                                 <div class="catalog-list__wholesale">120 345 ₸</div>
@@ -781,396 +796,6 @@
                                   </div>
                                 </div>
                               </li>
-                            </ul>
-
-                          </div>
-
-                          <div class="catalog-table__page">
-                           
-                            <ul class="catalog-table__catalog-list catalog-list">
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                              <li class="catalog-list__item">
-                                <div class="catalog-list__name"><a href="">Сальник насоса ГУРМПР</a></div>
-                                <div class="catalog-list__code">F-0000E</div>
-                                <div class="catalog-list__analogue">HM001</div>
-                                <div class="catalog-list__size">8x10/12x14.5</div>
-                                <div class="catalog-list__type">L-RING</div>
-                                <div class="catalog-list__brand">NHK</div>
-                                <div class="catalog-list__photo">
-                                  <img src="./icons/catalog/photo.svg" alt="photo">
-                                </div>
-                                <div class="catalog-list__avalaible">123</div>
-                                <div class="catalog-list__wholesale">120 345 ₸</div>
-                                <div class="catalog-list__retail red">150 345 ₸</div>
-                                <div class="catalog-list__cart">
-                                  <form action="" class="catalog-table__form">
-                                    <input type="number" placeholder="1">
-                                    <button type="submit" class="catalog-table__btn">
-                                      <img src="./icons/catalog/cart.svg" alt="cart" class="black-cart">
-                                      <img src="./icons/catalog/not-available_cart.svg" alt="cart" class="gray-cart">
-                                    </button>
-                                  </form>
-                                </div>
-                              </li>
-                            </ul>
-
-                            <ul class="catalog-table__catalog-list catalog-list-mob">
-                              <li class="catalog-list-mob__item">
-                                <div class="catalog-list-mob__head">
-                                  <div class="catalog-list-mob__name">Назначение</div>
-                                  <div class="catalog-list-mob__value">Сальник насоса ГУРМПР</div>
-                                </div>
-
-                                <div class="catalog-list-mob__info">
-                                  <ul>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Код</div>
-                                      <div class="catalog-list-mob__value">F-0000E</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Аналог</div>
-                                      <div class="catalog-list-mob__value">HM001</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Размер</div>
-                                      <div class="catalog-list-mob__value">8x10/12x14.5</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Тип</div>
-                                      <div class="catalog-list-mob__value">L-RING</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Бренд</div>
-                                      <div class="catalog-list-mob__value">NHK</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Фото</div>
-                                      <div class="catalog-list-mob__value">
-                                        <img src="./icons/catalog/photo.svg" alt="photo">
-                                      </div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Наличие</div>
-                                      <div class="catalog-list-mob__value">543</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Цена опт.</div>
-                                      <div class="catalog-list-mob__value">120 345 ₸</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Цена розн.</div>
-                                      <div class="catalog-list-mob__value red">150 345 ₸</div>
-                                    </li>
-                                  </ul>
-                                  
-                                  <div class="catalog-list-mob__divider"></div>
-                                </div>
-
-                                <div class="catalog-list-mob__cart-block">
-                                  <div class="catalog-list-mob__name">В корзину</div>
-                                  <div class="catalog-list__cart">
-                                    <form action="" class="catalog-table__form">
-                                      <input type="number" placeholder="1">
-                                      <button type="submit" class="catalog-table__btn">
-                                        <img src="./icons/catalog/mob-cart.svg" alt="cart" class="black-cart">
-                                      </button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </li>
-                              <li class="catalog-list-mob__item">
-                                <div class="catalog-list-mob__head">
-                                  <div class="catalog-list-mob__name">Назначение</div>
-                                  <div class="catalog-list-mob__value">Сальник насоса ГУРМПР</div>
-                                </div>
-
-                                <div class="catalog-list-mob__info">
-                                  <ul>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Код</div>
-                                      <div class="catalog-list-mob__value">F-0000E</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Аналог</div>
-                                      <div class="catalog-list-mob__value">HM001</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Размер</div>
-                                      <div class="catalog-list-mob__value">8x10/12x14.5</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Тип</div>
-                                      <div class="catalog-list-mob__value">L-RING</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Бренд</div>
-                                      <div class="catalog-list-mob__value">NHK</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Фото</div>
-                                      <div class="catalog-list-mob__value">
-                                        <img src="./icons/catalog/photo.svg" alt="photo">
-                                      </div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Наличие</div>
-                                      <div class="catalog-list-mob__value">543</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Цена опт.</div>
-                                      <div class="catalog-list-mob__value">120 345 ₸</div>
-                                    </li>
-                                    <li>
-                                      <div class="catalog-list-mob__name">Цена розн.</div>
-                                      <div class="catalog-list-mob__value red">150 345 ₸</div>
-                                    </li>
-                                  </ul>
-                                  
-                                  <div class="catalog-list-mob__divider"></div>
-                                </div>
-
-                                <div class="catalog-list-mob__cart-block">
-                                  <div class="catalog-list-mob__name">В корзину</div>
-                                  <div class="catalog-list__cart">
-                                    <form action="" class="catalog-table__form">
-                                      <input type="number" placeholder="1">
-                                      <button type="submit" class="catalog-table__btn">
-                                        <img src="./icons/catalog/mob-cart.svg" alt="cart" class="black-cart">
-                                      </button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </li>
-                          
                             </ul>
 
                           </div>

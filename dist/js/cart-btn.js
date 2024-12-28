@@ -1,3 +1,5 @@
+"use strict";
+
 const allCartCounters = document.querySelectorAll('.cart-btn');
 
 function isMoreThanZero(counter, elem) {
