@@ -44,23 +44,67 @@ show(imageIndex);
 const titles = document.querySelectorAll('.product-descr__name');
 const texts = document.querySelectorAll('.product-descr__text');
 
-let titleIndex = 0;
+// 1 Вариант
+function chooseActive(id, title) {
+    texts.forEach(text => {
+        text.classList.remove('product-descr__text_active');
+    });
 
-function showText (index) {
-    titles[titleIndex].classList.remove('product-descr__name_active');
-    texts[titleIndex].classList.remove('product-descr__text_active');
+    titles.forEach(item => {
+        item.classList.remove('product-descr__name_active');
+    });
 
-    titles[index].classList.add('product-descr__name_active');
-    texts[index].classList.add('product-descr__text_active');
+    texts.forEach(text => {
+        if (text.id === id) {
+            text.classList.add('product-descr__text_active');
+        }
+    });
+    
+    title.classList.add('product-descr__name_active');
 
-    titleIndex = index;
 }
 
-titles.forEach((title, index) => {
-    title.addEventListener("click", () => showText(index));
+titles.forEach(title => {
+    title.addEventListener("click", () => {
+        switch(title.innerHTML) {
+            case 'Описание':
+                chooseActive('product-descr', title);
+                break
+            case 'Характеристики':
+                chooseActive('product-charact', title);
+                break
+        }
+    });
 });
 
-showText(titleIndex); 
+chooseActive('product-descr', titles[0]);
+
+// 2 Вариант
+// let titleIndex = 0;
+
+// function showText (index) {
+//     titles[titleIndex].classList.remove('product-descr__name_active');
+//     texts[titleIndex].classList.remove('product-descr__text_active');
+
+//     titles[index].classList.add('product-descr__name_active');
+//     texts[index].classList.add('product-descr__text_active');
+
+//     titleIndex = index;
+// }
+
+// titles.forEach((title, index) => {
+//     title.addEventListener("click", () => showText(index));
+// });
+
+// showText(titleIndex);
+
+//button "Все характеристики"
+
+const allInfoBtn = document.querySelector('.buy-block__all-info');
+
+allInfoBtn.addEventListener("click", (e) => {
+    chooseActive('product-charact', titles[1]);
+});
 
 //SIMILAR-SLIDER
 const similarPages = document.querySelectorAll('.similar-slider__page');
