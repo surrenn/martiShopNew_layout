@@ -130,7 +130,6 @@
     padding: 0 10px 8px 10px;
 
     &__item {
-        flex-shrink: 0;
         min-height: 59px;
         border-radius: 6px;
         display: flex;
@@ -519,25 +518,12 @@
 
         &__form-block {
             padding: 15px;
-            // min-height: 50px;
 
             .catalog__form-wrapper  {
                 max-height: 0;
                 overflow: hidden;
                 transition: all 0.5s;
             }
-
-            // &_active  {
-            //     padding: 20px;
-
-            //     .catalog__form  {
-            //         display: flex;
-            //     }
-
-            //     .catalog__hide {
-            //         margin-top: 20px;
-            //     }
-            // }
         }
 
         &__hide {
