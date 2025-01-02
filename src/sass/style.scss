@@ -72,6 +72,7 @@ $containerPaddings: 15px;
 @import "blocks/select";
 @import "blocks/catalog/cart-btn";
 @import "blocks/order/shopping-cart";
+@import "blocks/account-login/account-login.scss";
 
 //inputs outline===========================================================
 input:hover, textarea:hover {
@@ -88,10 +89,10 @@ textarea:active {
 }
 
 .has-text {
-  outline: 1px solid $yellow;
-  font-size: 14px;
-  color: $mainColor;
-  background-color: #fff;
+  outline: 1px solid $yellow !important;
+  font-size: 14px !important;
+  color: $mainColor !important;
+  background-color: #fff !important;
 
   &:hover {
     outline: 1px solid $yellow;

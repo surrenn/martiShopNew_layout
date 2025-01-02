@@ -1,0 +1,30 @@
+.account-login {
+  padding: 25px 0 183px 0;
+}
+
+.breadcrumb {
+  list-style: none;
+  text-decoration: none;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  position: relative;
+}
+
+.breadcrumb li:not(:first-child) {
+  margin-left: 24px;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+  display: block;
+  list-style: none;
+  width: 5px;
+  height: 8px;
+  background-image: url("../icons/account-login/arrow.svg");
+}

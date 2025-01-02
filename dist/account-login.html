@@ -150,23 +150,104 @@
       </header>
 
       <main class="main">
-        <section class="main__order-success order-success">
-            <div class="order-success__container _container">
-                <div class="order-success__order-msg order-msg">
-                    <div class="order-msg__img">
-                        <img src="./img/successOrder/success.png" alt="Ваш заказ успешно создан!">
+        <section class="main__account-login account-login">
+            <div class="account-login__container _container">
+                <div id="account-login" class="container">
+                    <ul class="breadcrumb">
+                       <li><a href="https://mitrofanov.kz/index.php?route=common/home">Главная</a></li>
+                       <li><a href="https://mitrofanov.kz/index.php?route=account/account">Аккаунт</a></li>
+                       <li><a href="https://mitrofanov.kz/index.php?route=account/login">Авторизация</a></li>
+                    </ul>
+                    <div class="row">
+                       <div id="content" class="col-sm-9">
+                          <div class="row">
+                             <div class="col-sm-6">
+                                <div class="well">
+                                   <h2>Новый покупатель</h2>
+                                   <p><strong>Регистрация</strong></p>
+                                   <p>Создание учётной записи поможет делать покупки быстрее и удобнее. Вы также сможете отслеживать статус своего заказа, пользоваться закладками, видеть свои предыдущие заказы или получить скидку как наш постоянный покупатель.</p>
+                                   <a href="https://mitrofanov.kz/index.php?route=account/register" class="btn btn-primary">Продолжить</a>
+                                </div>
+                             </div>
+                             <div class="col-sm-6">
+                                <div class="well">
+                                   <h2>Постоянный покупатель</h2>
+                                   <p><strong>Я совершал здесь покупки ранее и регистрировался</strong></p>
+                                   <form action="https://mitrofanov.kz/index.php?route=account/login" method="post" enctype="multipart/form-data">
+                                      <div class="form-group">
+                                         <label class="control-label" for="input-email">E-Mail адрес</label>
+                                         <input type="text" name="email" value="" placeholder="E-Mail адрес" id="input-email" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                         <label class="control-label" for="input-password">Пароль</label>
+                                         <input type="password" name="password" value="" placeholder="Пароль" id="input-password" class="form-control">
+                                         <a href="https://mitrofanov.kz/index.php?route=account/forgotten">Забыли пароль?</a>
+                                      </div>
+                                      <input type="submit" value="Войти" class="btn btn-primary">
+                                   </form>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <aside id="column-right" class="col-sm-3 hidden-xs">
+                          <div class="list-group">
+                             <a href="https://mitrofanov.kz/index.php?route=account/login" class="list-group-item">
+                              Вход
+                              <img src="./icons/account-login/signup.svg" alt="Вход">
+                            </a> 
+                             <a href="https://mitrofanov.kz/index.php?route=account/register" class="list-group-item">
+                              
+                              Регистрация
+                              <img src="./icons/account-login/signup.svg" alt="">
+                             </a> 
+                             <a href="https://mitrofanov.kz/index.php?route=account/forgotten" class="list-group-item">
+                              Забыли пароль?
+                              <img src="./icons/account-login/signup.svg" alt="">
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/account" class="list-group-item">
+                              Моя информация
+                              <img src="./icons/account-login/signup.svg" alt="">
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/address" class="list-group-item">
+                              Список контактов
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/wishlist" class="list-group-item">
+                              Закладки
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/order" class="list-group-item">
+                              История заказов
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/download" class="list-group-item">
+                              Файлы для скачивания
+                              <img src="./icons/account-login/signup.svg" alt="">
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/recurring" class="list-group-item">
+                              Регулярные платежи
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/reward" class="list-group-item">
+                              Бонусные баллы
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/return" class="list-group-item">
+                              Возвраты
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/transaction" class="list-group-item">
+                              Платежи
+                              <img src="./icons/account-login/signup.svg" alt=""> 
+                            </a>
+                             <a href="https://mitrofanov.kz/index.php?route=account/newsletter" class="list-group-item">
+                              E-Mail рассылка
+                              <img src="./icons/account-login/signup.svg" alt="">
+                            </a>
+                          </div>
+                       </aside>
                     </div>
-                    <div class="order-msg__title">Ваш заказ успешно создан!</div>
-
-                    <div class="order-msg__subtitle">Ваш заказ #106 сформирован!</div>
-
-                    <div class="order-msg__descr">
-                        Пожалуйста, задавайте нам любые вопросы, которые у вас возникают.Зарегистрированным пользователям доступен просмотр состояния заказа и прошлых покупок.
-                        Спасибо за покупки в нашем интернет-магазине!
-                    </div>
-
-                    <a href="index.html" class="btn_ylw order-msg__btn">Продолжить</a>
-                </div>
+                 </div>
             </div>
         </section>
       </main>
@@ -214,10 +295,6 @@
                   <a href="">info@martishop.kz</a>
                 </div>
               </div>
-
-
-
-              
             </div>
 
             <div class="footer-top__img">

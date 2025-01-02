@@ -3329,6 +3329,231 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   text-align: right;
 }
 
+.account-login {
+  padding: 25px 0 183px 0;
+}
+
+.breadcrumb {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.breadcrumb li:not(:first-child) {
+  margin-left: 24px;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+  display: block;
+  list-style: none;
+  width: 5px;
+  height: 8px;
+  background-image: url("../icons/account-login/arrow.svg");
+}
+
+.breadcrumb li:last-child {
+  color: #787b8b;
+}
+
+.breadcrumb li a:hover {
+  color: #4e7ffd;
+}
+
+.row {
+  display: flex;
+}
+
+#column-right {
+  flex-grow: 1;
+  order: 1;
+  margin-right: 45px;
+}
+
+#content {
+  order: 2;
+}
+
+.col-sm-6:not(:last-child) {
+  margin-right: 25px;
+}
+
+.well {
+  max-width: 450px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.well h2 {
+  font-family: "MTS Wide", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.well p {
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 5px;
+}
+
+.well p strong {
+  font-family: "MTS Wide", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.well form .btn {
+  width: 100%;
+  outline: none;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 9px 35px 12px 35px;
+  min-height: 40px;
+  background-color: #ffdd2d;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 130%;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #ffe664;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  border-radius: 10px;
+  height: 40px;
+  color: #787b8b;
+  padding: 10px 15px;
+  background-color: #f2f4f7;
+  margin-top: 8px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.form-group input:hover {
+  background-color: #fff;
+  outline: 1px solid #d5ddec;
+}
+
+.form-group input:focus, .form-group input:active {
+  outline: 1px solid #ffdd2d;
+  background-color: #fff;
+}
+
+.form-group a {
+  display: inline-block;
+  color: #4e7ffd;
+  margin-top: 10px;
+}
+
+.form-group a:hover {
+  color: #ff4d47;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.control-label {
+  font-size: 12px;
+  line-height: 150%;
+  color: #787b8b;
+}
+
+.list-group {
+  border-radius: 8px;
+  padding: 25px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  max-width: 310px;
+}
+
+.list-group-item {
+  line-height: 130%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item:hover {
+  color: #4e7ffd;
+}
+
+@media (max-width: 1080px) {
+  #column-right {
+    margin-right: 10px;
+  }
+  .col-sm-6:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  #column-right {
+    display: none;
+  }
+  .row {
+    column-gap: 25px;
+    justify-content: flex-end;
+  }
+  #content {
+    width: 100%;
+  }
+  .col-sm-6:not(:last-child) {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .account-login {
+    padding: 15px 0 100px 0;
+  }
+  .breadcrumb {
+    margin-bottom: 15px;
+  }
+  .row {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .well {
+    max-width: 100%;
+  }
+  .col-sm-6 {
+    flex: 1 1 100%;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .well {
+    padding: 20px;
+  }
+}
 input:hover, textarea:hover {
   background-color: #fff;
   outline: 1px solid #d5ddec;
@@ -3340,10 +3565,10 @@ input:focus, input:active, textarea:focus, textarea:active {
 }
 
 .has-text {
-  outline: 1px solid #ffdd2d;
-  font-size: 14px;
-  color: #171719;
-  background-color: #fff;
+  outline: 1px solid #ffdd2d !important;
+  font-size: 14px !important;
+  color: #171719 !important;
+  background-color: #fff !important;
 }
 
 .has-text:hover {
