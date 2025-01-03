@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (inputs.length != 0) {
         inputs.forEach(input => {
-            if (!input.classList.contains("cart-btn__input")) {
+            if (!input.classList.contains("no-has-text")) {
                 input.addEventListener('input', function() {
                     if (input.value.trim() !== "") {
                         input.classList.add('has-text');

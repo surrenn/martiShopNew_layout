@@ -98,7 +98,7 @@
     }
 
     form {
-        .btn {
+        .btn-yellow {
             width: 100%;
             outline: none;
         }
@@ -106,7 +106,7 @@
 
 }
 
-.btn {
+.btn-yellow {
     border-radius: 10px;
     padding: 9px 35px 12px 35px;
     min-height: 40px;
@@ -135,7 +135,7 @@
         color: $gray;
         padding: 10px 15px;
         background-color: $backgroundColor;
-        margin-top: 8px;
+        // margin-top: 8px;
         text-align: left;
         font-weight: 400;
         font-size: 16px;
@@ -200,6 +200,22 @@
     }
 }
 
+@media (max-width: 1130px) {
+   
+    #column-right {
+        display: none;
+    }
+    
+    .row {
+        column-gap: 25px;
+        justify-content: space-between; 
+    }
+    
+    #content {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1080px) {
     #column-right {
         margin-right: 10px;
@@ -215,19 +231,7 @@
 
 @media (max-width: 992px) {
 
-    #column-right {
-        display: none;
-    }
 
-    .row {
-        column-gap: 25px;
-        // justify-content: flex-end;
-        justify-content: space-between; 
-    }
-
-    #content {
-        width: 100%;
-    }
 
     .col-sm-6 {
         &:not(:last-child) {
@@ -260,7 +264,7 @@
        flex: 1 1 100%;
     }
 
-    .btn {
+    .btn-yellow {
         width: 100%;
         text-align: center;
     }

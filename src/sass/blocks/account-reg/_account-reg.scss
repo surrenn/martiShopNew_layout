@@ -212,7 +212,17 @@
 .list-group-item {
 }
 
+@media (max-width: 1130px) {
+    .account-reg__block {
+        flex: 1 1 100%;
+    }
+}
+
 @media (max-width: 780px) {
+    .account-reg {
+        padding: 15px 0 100px 0;
+    }
+
     .pull-right {
         float: unset;
 

@@ -3415,12 +3415,12 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   font-size: 18px;
 }
 
-.well form .btn {
+.well form .btn-yellow {
   width: 100%;
   outline: none;
 }
 
-.btn {
+.btn-yellow {
   border-radius: 10px;
   padding: 9px 35px 12px 35px;
   min-height: 40px;
@@ -3431,7 +3431,7 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   margin-top: 15px;
 }
 
-.btn:hover {
+.btn-yellow:hover {
   background-color: #ffe664;
 }
 
@@ -3446,7 +3446,6 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   color: #787b8b;
   padding: 10px 15px;
   background-color: #f2f4f7;
-  margin-top: 8px;
   text-align: left;
   font-weight: 400;
   font-size: 16px;
@@ -3504,15 +3503,7 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   color: #4e7ffd;
 }
 
-@media (max-width: 1080px) {
-  #column-right {
-    margin-right: 10px;
-  }
-  .col-sm-6:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-@media (max-width: 992px) {
+@media (max-width: 1130px) {
   #column-right {
     display: none;
   }
@@ -3523,6 +3514,16 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   #content {
     width: 100%;
   }
+}
+@media (max-width: 1080px) {
+  #column-right {
+    margin-right: 10px;
+  }
+  .col-sm-6:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
   .col-sm-6:not(:last-child) {
     margin: 0;
   }
@@ -3544,7 +3545,7 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   .col-sm-6 {
     flex: 1 1 100%;
   }
-  .btn {
+  .btn-yellow {
     width: 100%;
     text-align: center;
   }
@@ -3717,7 +3718,15 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   opacity: 1;
 }
 
+@media (max-width: 1130px) {
+  .account-reg__block {
+    flex: 1 1 100%;
+  }
+}
 @media (max-width: 780px) {
+  .account-reg {
+    padding: 15px 0 100px 0;
+  }
   .pull-right {
     float: unset;
   }
@@ -3745,7 +3754,7 @@ input:focus, input:active, textarea:focus, textarea:active {
 }
 
 .has-text {
-  outline: 1px solid #ffdd2d !important;
+  outline: 1px solid #ffdd2d;
   font-size: 14px !important;
   color: #171719 !important;
   background-color: #fff !important;
