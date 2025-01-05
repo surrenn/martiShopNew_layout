@@ -69,8 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     catalogInner.classList.add('catalog-select__inner_active');
 
                     catalogInner.querySelectorAll('.catalog-select__inner-item').forEach(innerItem => {
-                        innerItem.addEventListener('click', (e) => {
-                            e.preventDefault();
+                        innerItem.addEventListener('click', (e) => {gg
                             catalogInner.classList.remove('catalog-select__inner_active');
                             catalogSelect.classList.remove('catalog-select_active');
                             catalogBtnWrapper.classList.remove('header-bottom__catalog-btn-wrapper_active');
