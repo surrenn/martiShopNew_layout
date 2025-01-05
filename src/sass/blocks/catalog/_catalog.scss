@@ -137,14 +137,6 @@
         font-size: 15px;
         line-height: 130%;
 
-        &_not-available {
-            color: $gray;
-
-            .red {
-                color: $gray;
-            }
-        }
-
         div {
             padding: 20px 10px;
             position: relative;
@@ -186,10 +178,33 @@
         &:nth-child(2n) {
             background-color: $white;
         }
+
+        a:hover {
+            color: #4e7ffd;
+        }
+
+        &_not-available {
+            color: $gray;
+
+            .red {
+                color: $gray;
+            }
+
+            .catalog-list__name {
+               
+            }
+
+            a:hover {
+                color: $gray; 
+            }
+
+        }
     }
 
     &__name {
         flex: 0 1 225px;
+
+
     }
 
     &__code {
