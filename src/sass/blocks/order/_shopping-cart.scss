@@ -101,6 +101,7 @@
 
 .table-responsive {
 }
+
 .table {
     font-size: 15px;
     line-height: 130%;
@@ -161,4 +162,14 @@
 .btn-danger {
 }
 .fa-times-circle {
+}
+
+@media (max-width: 768px) {
+    .shopping-cart {
+        overflow-x: scroll;
+    }
+
+    .table-responsive {
+        width: 1000px;
+    }
 }

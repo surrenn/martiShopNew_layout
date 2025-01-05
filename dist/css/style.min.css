@@ -3338,6 +3338,14 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   text-align: right;
 }
 
+@media (max-width: 768px) {
+  .shopping-cart {
+    overflow-x: scroll;
+  }
+  .table-responsive {
+    width: 1000px;
+  }
+}
 .account-login {
   padding: 25px 0 183px 0;
 }
