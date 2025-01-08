@@ -79,9 +79,11 @@ gulp.task(
     "server",
     "styles",
     "scripts",
-    "fonts",
-    "icons",
+    // "fonts",
+    // "icons",
     "html",
-    "images"
+    // "images"
   )
 );
+
+

@@ -436,7 +436,158 @@
                   </div>
                 </div>
 
-                <form action="" class="make-order__form order-form">
+                <div class="row make-order__block">
+                  <div class="col-sm-8 make-order__order">
+                    <div id="custom-login">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Оформить заказ как</div>
+                        <div class="panel-body">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="account" value="register" checked="checked" />
+                              <span>Зарегистрироваться</span>
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="account" value="guest" />
+                              <span>Гость</span>
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="account" value="auth" />
+                              <span>Уже зарегистрирован</span>
+                            </label>
+                          </div>
+                
+                          <form id="auth-form" style="display: none;" style="display: none;">
+                            <div class="form-group">
+                              <label class="control-label" for="input-email">E-mail</label>
+                              <input type="text" name="email" value="" placeholder="E-mail" id="input-email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="input-password">Пароль</label>
+                              <input type="password" name="password" value="" placeholder="Пароль" id="input-password" class="form-control" />
+                              <a href="https://mitrofanov.kz/index.php?route=account/forgotten">Забыли пароль?</a>
+                            </div>
+                            <input type="submit" value="Войти" id="button-login" data-loading-text="Загрузка" class="btn btn-primary" />
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="custom-customer" class="">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Личные данные</div>
+                        <div class="panel-body">
+                          <div class="form-group" style="display: none;">
+                            <label class="control-label">Группа покупателя</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="customer_group_id" value="1" checked="checked" />
+                                Default
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group required" id="customer-field-firstname" style="display: block;">
+                            <label class="control-label" for="customer-input-firstname">Имя</label>
+                            <input type="text" name="customer_firstname" value="" placeholder="Имя" id="customer-input-firstname" class="form-control" data-validation="" />
+                          </div>
+                          <div class="form-group required" id="customer-field-lastname" style="display: block;">
+                            <label class="control-label" for="customer-input-lastname">Фамилия</label>
+                            <input type="text" name="customer_lastname" value="" placeholder="Фамилия" id="customer-input-lastname" class="form-control" data-validation="" />
+                          </div>
+                          <div class="form-group required" id="customer-field-telephone" style="display: block;">
+                            <label class="control-label" for="customer-input-telephone">Телефон</label>
+                            <input type="text" name="customer_telephone" value="" placeholder="Телефон" id="customer-input-telephone" class="form-control" data-validation="" />
+                          </div>
+                          <div class="form-group required" id="customer-field-email" style="display: block;">
+                            <label class="control-label" for="customer-input-email">Email</label>
+                            <input type="text" name="customer_email" value="" placeholder="Email" id="customer-input-email" class="form-control" data-validation="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="custom-payment">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Оплата</div>
+                        <div class="panel-body">
+                          <div class="radio-border radio-border_active">
+                            <div class="radio" style="display: block;">
+                              <label>
+                                <input type="radio" name="payment_method" value="bank_transfer" checked="checked" />
+                                <span>Банковский перевод</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 make-order__total">
+                    <div id="custom-total-wrapper">
+                      <div id="custom-total">
+                        <table class="table table-bordered">
+                          <tbody>
+                            <tr>
+                              <td class="text-right"><strong>Итого:</strong></td>
+                              <td class="text-right">500₸</td>
+                            </tr>
+                  
+                            <tr>
+                              <td class="text-right"><strong>Всего:</strong></td>
+                              <td class="text-right">500₸</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="total-price">500</div>
+                      </div>
+                  
+                      <div class="buttons" id="custom-control">
+                        <div class="pull-right" style="width: 100%;">
+                          <input type="button" value="Оформить заказ" id="button-custom-order" data-loading-text="Загрузка..." class="btn btn-yellow" style="display: block !important;" />
+                          <label class="control-label">
+                            Мною прочитаны и я даю согласие с документом <a href="https://mitrofanov.kz/index.php?route=information/information/agree&amp;information_id=5" class="agree"><b>Условия соглашения</b></a>
+                            <input type="checkbox" name="agree" value="1" class="has-text" />
+                            <span></span>
+                          </label>
+                          <br />
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+
+                    <div class="total__triangles">
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                      <div class="total__elem"></div>
+                    </div>
+                  </div>                  
+                </div>
+                
+
+                <!-- <form action="" class="make-order__form order-form">
                     <div class="order-form__wrapper">
                         <div class="order-form__block customer">
                             <h4 class="order-form__title">Оформить заказ как</h4>
@@ -710,7 +861,7 @@
                           <div class="total__elem"></div>
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         </section>
       </main>
