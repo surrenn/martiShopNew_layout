@@ -2271,6 +2271,14 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   margin: 0;
 }
 
+#custom-customer .panel-body .form-control {
+  border: none;
+}
+
+#custom-customer .panel-body .form-control:focus {
+  box-shadow: none;
+}
+
 #custom-payment .panel-body {
   display: flex;
   flex-direction: column;
@@ -2329,10 +2337,6 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
 }
 
 .make-order__total {
-  border-radius: 16px 16px 0 0;
-  background-color: #fff;
-  padding: 30px 25px 37px 25px;
-  position: relative;
   flex: 1 0 410px;
 }
 
@@ -2448,7 +2452,6 @@ input[type=number], input[type=number]:hover, input[type=number]:focus {
   }
   .make-order__total {
     flex: 1 1 auto;
-    padding: 20px 15px 40px 15px;
   }
 }
 @media (max-width: 670px) {

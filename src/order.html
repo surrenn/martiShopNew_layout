@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css" />
     <script src="./JS/index.js" defer></script>
     <title>MartiShop</title>
   </head>
-  <body>
+  <body class="">
     <div class="wrapper">
       <header class="header">
         <div class="header__top header-top">
@@ -436,8 +437,8 @@
                   </div>
                 </div>
 
-                <div class="row make-order__block">
-                  <div class="col-sm-8 make-order__order">
+                <div class="make-order__block">
+                  <div class="make-order__order">
                     <div id="custom-login">
                       <div class="panel panel-default">
                         <div class="panel-heading">Оформить заказ как</div>
@@ -524,64 +525,71 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4 make-order__total">
+                  <div class="make-order__total">
                     <div id="custom-total-wrapper">
-                      <div id="custom-total">
-                        <table class="table table-bordered">
-                          <tbody>
-                            <tr>
-                              <td class="text-right"><strong>Итого:</strong></td>
-                              <td class="text-right">500₸</td>
-                            </tr>
-                  
-                            <tr>
-                              <td class="text-right"><strong>Всего:</strong></td>
-                              <td class="text-right">500₸</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div class="total-price">500</div>
-                      </div>
-                  
-                      <div class="buttons" id="custom-control">
-                        <div class="pull-right" style="width: 100%;">
-                          <input type="button" value="Оформить заказ" id="button-custom-order" data-loading-text="Загрузка..." class="btn btn-yellow" style="display: block !important;" />
-                          <label class="control-label">
-                            Мною прочитаны и я даю согласие с документом <a href="https://mitrofanov.kz/index.php?route=information/information/agree&amp;information_id=5" class="agree"><b>Условия соглашения</b></a>
-                            <input type="checkbox" name="agree" value="1" class="has-text" />
-                            <span></span>
-                          </label>
-                          <br />
+                      <div class="order-form__total total">
+                        <div id="custom-total" class="">
+                          <div class="order-form__title total__title">Ваш заказ</div>
+                    
+                          <div class="total__info">
+                            <div class="total__item">
+                              <div>На сумму</div>
+                              <div>500₸</div>
+                            </div>
+                    
+                            <div class="total__divider"></div>
+                    
+                            <div class="total__item total__item-result">
+                              <div>Итог</div>
+                              <div>500₸</div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="clearfix"></div>
+                    
+                        <div class="buttons" id="custom-control">
+                          <div class="pull-right" style="width: 100%;">
+                            <input type="button" value="Оформить заказ" id="button-custom-order" data-loading-text="Загрузка..." class="btn btn_ylw total__btn" style="display: block !important;" />
+                    
+                            <div class="total__checkbox-block">
+                              <label for="agreement" class="total__checkbox-label">
+                                <input type="checkbox" name="agree" value="1" class="total__checkbox" id="agreement" />
+                                <span class="total__checkbox-change"></span>
+                                <span class="total__text">
+                                  Мною прочитаны и я даю согласие с документом <a href="https://mitrofanov.kz/index.php?route=information/information/agree&amp;information_id=5" class="agree"><b>Условия соглашения</b></a>
+                                </span>
+                              </label>
+                            </div>
+                    
+                            <div class="total__triangles">
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                              <div class="total__elem"></div>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
                       </div>
-                    </div>
-
-                    <div class="total__triangles">
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
-                      <div class="total__elem"></div>
                     </div>
                   </div>                  
                 </div>

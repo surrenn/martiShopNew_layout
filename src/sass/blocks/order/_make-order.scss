@@ -553,6 +553,14 @@
             flex: 1 1 380px;
             margin: 0;
         }
+
+        .form-control {
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
     }
 }
 
@@ -619,10 +627,6 @@
 }
 
 .make-order__total {
-    border-radius: 16px 16px 0 0;
-    background-color: #fff;
-    padding: 30px 25px 37px 25px;
-    position: relative;
     flex: 1 0 410px;
 
     .pull-right {
@@ -808,7 +812,6 @@
     
     .make-order__total {
         flex: 1 1 auto;
-        padding: 20px 15px 40px 15px;
     }
 }
 
